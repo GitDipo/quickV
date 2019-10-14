@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Page description" />
+    <meta name="keywords" content=", " />
+    <meta name="author" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <!--GLOBAL CSS-->
+    <link href="css/boot.min.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/jquery.selectBoxIt.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+
+    <title>Account Set Up | Quick Confirm</title>
+    <link rel="icon" href="favicon.ico">
+    <!--TRACKING
+
+-->
+
+    <!--PAGE CSS-->
+    <style>
+        /* Write your page specific CSS here */
+        
+        .prompt {
+            background: #FFFFFF;
+            padding: 5px 5px 45px 5px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .badge {
+            width: auto;
+            height: auto;
+        }
+        
+        .promptheader {
+            font-size: 28px;
+            margin-bottom: 0px;
+            clear: both;
+        }
+        
+        .promptbody {
+            margin-bottom: 0px;
+        }
+        
+        .threetags {
+            padding: 20px 0 0 0;
+        }
+        
+        .threetags p {
+            font-size: 28px;
+            margin-bottom: 0px;
+            clear: both;
+            font-family: 'Actor', sans-serif;
+            font-weight: Bold;
+            color: #ffffff;
+            padding: 20px 0 0 0;
+        }
+        
+        .frontmod {
+            font-size: 1.15em;
+        }
+        
+        .threetags-icon {
+            width: 160px;
+        }
+        
+        .services-img {
+            width: 95%;
+        }
+        
+        .addimage {
+            background: #FFFFFF;
+            height: 414px;
+            border: 1px dashed #999999;
+            vertical-align: middle;
+            float: none;
+            text-align: center;
+        }
+        
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        
+        .heroBack {
+            background-image: url(images/building-1210022_1920.jpg);
+            padding-top: 100px;
+            padding-bottom: 100px;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+      
+        
+        .heroBack p {
+            color: white;
+            font-size: 1.4em;
+        }
+        
+        .center-image {
+            vertical-align: middle;
+        }
+        
+        .closeprompt {
+            margin: 0;
+        }
+        
+        .closeprompt .close {
+            font-size: 20px;
+            color: #808285;
+        }
+        
+        .closeprompt .close:hover {
+            color: #666;
+        }
+        
+        .prompt-info {
+            background-color: #FFFFFF;
+            padding: 15px 10px 15px 10px;
+        }
+        
+        .space {
+            height: 0px;
+            margin: 20px auto;
+            width: 100%;
+        }
+        
+        .edit-icon {
+            color: #808285;
+            padding-top: 8px;
+        }
+        
+        .btn-primary-share,
+        .btn-primary-share:hover,
+        btn-primary-share:focus,
+        btn-primary-share:active {
+            background-color: #00bff2;
+            border: 0;
+            border-radius: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 10px 30px;
+            /* min-width: 220px; */
+            height: 38px;
+            width: 40%;
+        }
+        
+        .btn-primary-share:hover {
+            color: #fff;
+            background-color: #286090;
+            border-color: #204d74;
+        }
+        
+        .sharetruck {
+            padding: 0px 45px 45px 45px;
+        }
+        
+        .show-mob {
+            display: none;
+        }
+        /* modal */
+        
+        .modal-body h1 {
+            color: #303334;
+        }
+        
+        .modal-body h2 {
+            font-weight: normal;
+            font-family: 'Actor', 'Helvetica Neue', arial, sans-serif;
+            font-size: 30px;
+            margin: 30px 0 20px 0;
+        }
+        
+        .modal-body p {
+            font-size: 18px;
+        }
+        
+        .form-control {
+            border-radius: 0;
+            border: 1px solid #808285;
+            margin: 5px auto 10px auto;
+            height: 50px;
+        }
+        
+        #forgot-pass .form-control {
+            border-radius: 0;
+            border: 1px solid #808285;
+            margin: 5px auto 30px auto;
+            height: 50px;
+        }
+        
+        .modal-tc-logo {
+            width: 190px;
+            height: auto;
+        }
+        
+        label {
+            font-weight: normal;
+            font-size: 18px;
+        }
+        
+        .selectboxit-container .selectboxit {
+            border: 1px solid #808285;
+        }
+        
+        .selectboxit-container {
+            margin: 5px auto 10px auto;
+        }
+        
+        .selectboxit-text {
+            font-size: 16px;
+        }
+        
+        .btn-cancel,
+        .btn-cancel:active {
+            background-color: #b4b5b4;
+            border: 0;
+            border-radius: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 10px 30px;
+            min-width: 220px;
+            height: 38px;
+        }
+        
+        .btn-cancel:hover {
+            background-color: #808285;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #00bff2;
+        }
+        
+        .mbl-smaller-txt {
+            font-size: 16px;
+            line-height: 22px;
+            vertical-align: 2px;
+            color: #808285;
+        }
+        
+        .modal-body .btn {
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 480px) {
+            p {
+                text-align: center;
+            }
+            .btn-gray-share {
+                width: 100%;
+            }
+            .btn-primary-share {
+                width: 100%;
+            }
+            .prompt-info {
+                background-color: #FFFFFF;
+                padding: 15px 10px 15px 10px;
+                text-align: center;
+            }
+            .show-mob {
+                display: inline-block;
+            }
+            .hide-mob {
+                display: none;
+            }
+            .promptheader {
+                font-size: 20px;
+                margin-top: 10px;
+                margin-bottom: 0px;
+                clear: both;
+            }
+            .mob-full {
+                width: 100%;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            /* modal */
+            label {
+                font-weight: normal;
+                font-size: 14px;
+            }
+            .form-control,
+            #forgot-pass .form-control {
+                height: 40px;
+                margin: 5px auto 20px auto;
+            }
+            .modal-body h2,
+            .modal-body h1 {
+                font-size: 19px;
+            }
+            .container-fluid {
+                padding: 0;
+            }
+            .modal-body p {
+                font-size: 14px;
+            }
+            .btn-cancel,
+            .btn-cancel:hover,
+            .btn-cancel:active {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .mbl-smaller-txt {
+                font-size: 14px;
+                line-height: 22px;
+                vertical-align: 2px;
+            }
+            .modal-body .btn {
+                margin-bottom: 15px;
+                margin-left: 0px;
+            }
+        }
+        
+        @media (max-width: 990px) {
+            .form-left,
+            .form-right {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container-fluid {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+        }
+        
+        @media (min-width: 992px) {}
+    </style>
+</head>
+    <body style="padding-bottom: 40px">
+    <!--HEADER NAV-->
+    <!--END HEADER NAV-->
+
+    <!--HERO-->
+    <div class="hero hidden-xs heroBack">
+        <div class="contdivider">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 text-center text-white">
+                        <a name="maincontent"></a>
+                        <h1><strong>Account Setup for Credit Card Users</strong></h1>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--MAIN BODY CONTENT-->
+
+    <div class="contdivider" style="background-color:#ffffff;">
+        <div class="container main">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
+
+                    <div id="content">
+
+                        <br>
+                        <p>Please fill out the form below to setup a Verifier Credit Card Account. You may use your User Name and Password immediately after registration.
+                            <br>
+                            <br> All fields with an * asterisk are required. </p>
+
+                        <form id="step-1">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-left">
+                                    <input id="FName" class="form-control" name="FName" type="text" placeholder="*First Name" required/>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-right">
+                                    <input id="company" class="form-control" name="COMPANY" type="text" placeholder="*Company" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-left">
+                                    <input id="LName" class="form-control" name="LNAME" type="text" placeholder="*Last Name" required/>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-right">
+                                    <input id="phone" class="form-control" name="PHONE" type="text" placeholder="*Phone: 999-999-9999" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-left">
+                                    <input id="address1" class="form-control" name="ADDRESS1" type="text" placeholder="*Address 1" required/>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-right">
+                                    <input id="fax" class="form-control" name="FAX" type="text" placeholder="Fax: 999-999-9999" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-left">
+                                    <input id="address2" class="form-control" name="ADDRESS2" type="text" placeholder="Address 2" />
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-right">
+                                    <input id="email" class="form-control" name="EMAIL" type="text" placeholder="*Email" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-left">
+                                    <input id="city" class="form-control" name="CITY" type="text" placeholder="*City" required/>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-right">
+
+                                    <select class="form-control" id="state" placeholder="Industry" required>
+                                        <option value="***" selected disabled>*Industry</option>
+                                        </option>
+                                        <option value="001">Business Services</option>
+                                        <option value="002">Communications</option>
+                                        <option value="003">Construction</option>
+                                        <option value="004">Education</option>
+                                        <option value="005">Financial</option>
+                                        <option value="006">Government
+                                            <option value="007">Health Care</option>
+                                            <option value="008">Insurance</option>
+                                            <option value="009">Legal</option>
+                                            <option value="010">Leisure Time</option>
+                                            <option value="011">Manufacturing</option>
+                                            <option value="012">Nonprofit</option>
+                                            <option value="013">Real Estate</option>
+                                            <option value="014">Retail</option>
+                                            <option value="015">Transportation</option>
+                                            <option value="016">Utilities</option>
+                                            <option value="017">Wholesale</option>
+
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-left">
+                                    <select class="form-control" id="state" placeholder="State" required>
+                                        <option value="0" selected disabled>*State</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AK">AK</option>
+                                        <option value="AZ">AZ</option>
+                                        <option value="AR">AR</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CO">CO</option>
+                                        <option value="CT">CT</option>
+                                        <option value="DC">DC</option>
+                                        <option value="DE">DE</option>
+                                        <option value="FL">FL</option>
+                                        <option value="GA">GA</option>
+                                        <option value="HI">HI</option>
+                                        <option value="ID">ID</option>
+                                        <option value="IL">IL</option>
+                                        <option value="IN">IN</option>
+                                        <option value="IA">IA</option>
+                                        <option value="KS">KS</option>
+                                        <option value="KY">KY</option>
+                                        <option value="LA">LA</option>
+                                        <option value="ME">ME</option>
+                                        <option value="MD">MD</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MI">MI</option>
+                                        <option value="MN">MN</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MO">MO</option>
+                                        <option value="MT">MT</option>
+                                        <option value="NE">NE</option>
+                                        <option value="NV">NV</option>
+                                        <option value="NH">NH</option>
+                                        <option value="NJ">NJ</option>
+                                        <option value="NM">NM</option>
+                                        <option value="NY">NY</option>
+                                        <option value="NC">NC</option>
+                                        <option value="ND">ND</option>
+                                        <option value="OH">OH</option>
+                                        <option value="OK">OK</option>
+                                        <option value="OR">OR</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PR">PR</option>
+                                        <option value="RI">RI</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SD">SD</option>
+                                        <option value="TN">TN</option>
+                                        <option value="TX">TX</option>
+                                        <option value="UT">UT</option>
+                                        <option value="VT">VT</option>
+                                        <option value="VA">VA</option>
+                                        <option value="WA">WA</option>
+                                        <option value="WV">WV</option>
+                                        <option value="WI">WI</option>
+                                        <option value="WY">WY</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12 form-right">
+                                    <input id="zip" class="form-control" name="ZIP" type="text" placeholder="*ZIP Code" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <form id="step-1">
+                                    <div class="col-lg-6 col-sm-6 col-xs-12 form-left">
+                                        <select class="form-control" id="country" placeholder="Country" required>
+                                            <option value="0" selected disabled>Country</option>
+
+                                            <option value="USA">United States
+
+                                            </option>
+                                            <option value="AFG">Afghanistan
+                                            </option>
+                                            <option value="ALG">Algeria
+                                            </option>
+                                            <option value="ANT">Antigua
+                                            </option>
+                                            <option value="ARG">Argentina
+                                            </option>
+                                            <option value="ARU">Aruba
+                                            </option>
+                                            <option value="AUS">Australia
+                                            </option>
+                                            <option value="AUT">Austria
+                                            </option>
+                                            <option value="BAH">Bahamas
+                                            </option>
+                                            <option value="BAN">Bangladesh
+                                            </option>
+                                            <option value="BAR">Barbados
+                                            </option>
+                                            <option value="BEL">Belgium
+                                            </option>
+                                            <option value="BER">Bermuda
+                                            </option>
+                                            <option value="BHR">Bahrain
+                                            </option>
+                                            <option value="BLZ">Belize
+                                            </option>
+                                            <option value="BNK">Bangkok
+                                            </option>
+                                            <option value="BOL">Bolivia
+                                            </option>
+                                            <option value="BRA">Brazil
+                                            </option>
+                                            <option value="BRI">Britian
+                                            </option>
+                                            <option value="BRU">Brunei
+                                            </option>
+                                            <option value="BUL">Bulgaria
+                                            </option>
+                                            <option value="BUR">Burma
+                                            </option>
+                                            <option value="CAM">Cambodia
+                                            </option>
+                                            <option value="CAN">Canada
+                                            </option>
+                                            <option value="CAP">Cape Verde
+                                            </option>
+                                            <option value="CHI">Chile
+                                            </option>
+                                            <option value="CHN">China
+                                            </option>
+                                            <option value="COL">Colombia
+                                            </option>
+                                            <option value="CON">Congo
+                                            </option>
+                                            <option value="COS">Costa Rica
+                                            </option>
+                                            <option value="CUB">Cuba
+                                            </option>
+                                            <option value="CUR">Curaco
+                                            </option>
+                                            <option value="CYP">Cyprus
+                                            </option>
+                                            <option value="CZE">Czechoslavakia
+                                            </option>
+                                            <option value="DEN">Denmark
+                                            </option>
+                                            <option value="DOM">Dominican Republic
+                                            </option>
+                                            <option value="ECU">Ecuador
+                                            </option>
+                                            <option value="EGY">Egypt
+                                            </option>
+                                            <option value="ELS">El Salvador
+                                            </option>
+                                            <option value="ENG">England
+                                            </option>
+                                            <option value="EST">Estonia
+                                            </option>
+                                            <option value="ETH">Ethiopia
+                                            </option>
+                                            <option value="FIN">Finland
+                                            </option>
+                                            <option value="FRA">France
+                                            </option>
+                                            <option value="GAB">Gabon
+                                            </option>
+                                            <option value="GER">Germany
+                                            </option>
+                                            <option value="GHA">Ghana
+                                            </option>
+                                            <option value="GRD">Grenada
+                                            </option>
+                                            <option value="GRE">Greece
+                                            </option>
+                                            <option value="GRN">Greenland
+                                            </option>
+                                            <option value="GUA">Guam
+                                            </option>
+                                            <option value="GUD">Guadeloupe
+                                            </option>
+                                            <option value="GUI">Guinea
+                                            </option>
+                                            <option value="GUT">Guatemala
+                                            </option>
+                                            <option value="GUY">Guyana
+                                            </option>
+                                            <option value="HAI">Haiti
+                                            </option>
+                                            <option value="HOK">Hong Kong
+                                            </option>
+                                            <option value="HOL">Holland
+                                            </option>
+                                            <option value="HON">Honduras
+                                            </option>
+                                            <option value="HUN">Hungary
+                                            </option>
+                                            <option value="ICE">Iceland
+                                            </option>
+                                            <option value="IND">India
+                                            </option>
+                                            <option value="INO">Indonesia
+                                            </option>
+                                            <option value="IRE">Ireland
+                                            </option>
+                                            <option value="IRN">Iran
+                                            </option>
+                                            <option value="IRQ">Iraq
+                                            </option>
+                                            <option value="ISR">Israel
+                                            </option>
+                                            <option value="ITA">Italy
+                                            </option>
+                                            <option value="IVC">Ivory Coast
+                                            </option>
+                                            <option value="JAM">Jamaica
+                                            </option>
+                                            <option value="JAP">Japan
+                                            </option>
+                                            <option value="JOR">Jordan
+                                            </option>
+                                            <option value="KEN">Kenya
+                                            </option>
+                                            <option value="KOR">Korea
+                                            </option>
+                                            <option value="KUW">Kuwait
+                                            </option>
+                                            <option value="LAT">Latvia
+                                            </option>
+                                            <option value="LBR">Liberia
+                                            </option>
+                                            <option value="LEB">Lebanon
+                                            </option>
+                                            <option value="LIB">Libya
+                                            </option>
+                                            <option value="LIT">Lithuania
+                                            </option>
+                                            <option value="LUX">Luxembourg
+                                            </option>
+                                            <option value="MAL">Malaysia
+                                            </option>
+                                            <option value="MAR">Martinique
+                                            </option>
+                                            <option value="MAT">Malta
+                                            </option>
+                                            <option value="MAU">Mauritius
+                                            </option>
+                                            <option value="MEX">Mexico
+                                            </option>
+                                            <option value="MOC">Monaco
+                                            </option>
+                                            <option value="MON">Monserrat
+                                            </option>
+                                            <option value="MOR">Morocco
+                                            </option>
+                                            <option value="NAS">Nassau
+                                            </option>
+                                            <option value="NET">Netherlands
+                                            </option>
+                                            <option value="NEW">New Zealand
+                                            </option>
+                                            <option value="NGR">Niger
+                                            </option>
+                                            <option value="NIC">Nicaragua
+                                            </option>
+                                            <option value="NIG">Nigeria
+                                            </option>
+                                            <option value="NOI">Northern Ireland
+                                            </option>
+                                            <option value="NOR">Norway
+                                            </option>
+                                            <option value="OMA">Oman
+                                            </option>
+                                            <option value="PAK">Pakistan
+                                            </option>
+                                            <option value="PAN">Panama
+                                            </option>
+                                            <option value="PAR">Paraguay
+                                            </option>
+                                            <option value="PER">Peru
+                                            </option>
+                                            <option value="PHI">Phillipines
+                                            </option>
+                                            <option value="POL">Poland
+                                            </option>
+                                            <option value="POR">Portugal
+                                            </option>
+                                            <option value="PUR">Puerto Rico
+                                            </option>
+                                            <option value="QAT">Qatar
+                                            </option>
+                                            <option value="RHO">Rhodesia
+                                            </option>
+                                            <option value="ROM">Romania
+                                            </option>
+                                            <option value="SAU">Saudi Arabia
+                                            </option>
+                                            <option value="SCO">Scotland
+                                            </option>
+                                            <option value="SEN">Senegal
+                                            </option>
+                                            <option value="SIN">Singapore
+                                            </option>
+                                            <option value="SOA">South Africa
+                                            </option>
+                                            <option value="SOM">Somalia
+                                            </option>
+                                            <option value="SPA">Spain
+                                            </option>
+                                            <option value="SRI">Sri Lanka
+                                            </option>
+                                            <option value="STK">St. Kitts
+                                            </option>
+                                            <option value="STL">St. Lucia
+                                            </option>
+                                            <option value="STM">St. Martin
+                                            </option>
+                                            <option value="SUD">Sudan
+                                            </option>
+                                            <option value="SUR">Suriname
+                                            </option>
+                                            <option value="SWE">Sweden
+                                            </option>
+                                            <option value="SWI">Switzerland
+                                            </option>
+                                            <option value="SYR">Syria
+                                            </option>
+                                            <option value="TAI">Taiwan
+                                            </option>
+                                            <option value="TAN">Tanzania
+                                            </option>
+                                            <option value="THA">Thailand
+                                            </option>
+                                            <option value="TRI">Trinidad
+                                            </option>
+                                            <option value="TUN">Tunisia
+                                            </option>
+                                            <option value="TUR">Turkey
+                                            </option>
+                                            <option value="UAE">U.A.E.
+                                            </option>
+                                            <option value="UGA">Uganda
+                                            </option>
+                                            <option value="UKR">Ukraine
+                                            </option>
+                                            <option value="UNK">United Kingdom
+                                            </option>
+                                            <option value="URU">Uruguay
+                                            </option>
+                                            <option value="USA">United States
+                                            </option>
+                                            <option value="VEN">Venezuela
+                                            </option>
+                                            <option value="VIE">Vietnam
+                                            </option>
+                                            <option value="WAL">Wales
+                                            </option>
+                                            <option value="YUG">Yugoslavia
+                                            </option>
+                                            <option value="ZAI">Zaire
+                                            </option>
+                                            <option value="ZAM">Zambia
+                                            </option>
+                                            <option value="ZIM">Zimbabwe
+                                            </option>
+                                        </select>
+
+                                    </div>
+                            </div>
+
+                            <button type="submit" title="Continue Creating Credit Card Account" form="step-1" class="btn btn-primary">Continue</button>
+
+                            </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="foot-logo"> <img src="images/logo.png" width="90" style="height:auto;" alt="Quick Confirm" title="Quick Confirm" class="logo-img" /> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                    Main
+                    <br>
+                    <a href="home.html">Welcome</a>
+                    <br>
+                    <a href="login.html">Log In</a>
+                    <br>
+                    <a href="home.html#ourservices">Our Services</a>
+                    <br>
+                    <a href="about.html">About Us</a>
+                    <br>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                    Support
+                    <br>
+                    <a href="contact.html">Contact Us</a>
+                    <br>
+                    <a href="security.html">Security</a>
+                    <br>
+                    <a href="termsofuse.html">Terms of Use</a>
+                    <br><a href="privacy.html">Privacy</a>
+                    <br>
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                                     <br>
+                    <a href="compservices.html">Complimentary Sevices</a>
+                 
+                 
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div style="padding: 30px 0 10px 0" class="col-lg-12 copy text-center">
+                    Copyright © 2007 - 2019 QuickConfirm.com All Rights Reserved
+                </div>
+            </div>
+    </footer>
+    <div class="full-overlay hidden-xs hidden-sm hidden-md hidden-lg" style="display: block;"></div>
+    <div class="mobile-nav-overlay"></div>
+    <!--GLOBAL JS-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/boot.min.js"></script>
+    <script src="js/ie10-viewport-bug-fix.js"></script>
+    <script src="js/jquery.selectBoxIt.min.js"></script>
+
+    <!--PAGE JS-->
+    <script>
+        /* Write page specific JS here */
+        $("select").selectBoxIt();
+    </script>
+</body>
+
+</html>

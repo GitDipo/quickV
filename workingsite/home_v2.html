@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Page description" />
+    <meta name="keywords" content=", " />
+    <meta name="author" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <!--GLOBAL CSS-->
+    <link href="css/boot.min.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+
+    <link href="css/global.css" rel="stylesheet">
+
+    <title>Home | Quick Confirm</title>
+    <link rel="icon" href="favicon.ico">
+    <!--TRACKING
+
+-->
+
+    <!--PAGE CSS-->
+    <style>
+        /* Write your page specific CSS here */
+        html{
+              scroll-behavior: smooth;
+        }
+        body{
+            line-height: 27px;
+        }
+
+        h1 {
+    margin-top: 0px;
+}
+        
+        .wai {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        
+        .long-container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .image-container {
+            -webkit-box-shadow: 5px 5px 17px 0px #ccc;
+            -moz-box-shadow: 5px 5px 17px 0px #ccc;
+            box-shadow: 5px 5px 17px 0px #ccc;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            min-height: 140px;
+            border-radius: 0.313rem;
+            min-height: 142px;
+            width: 100%;
+            box-shadow: none;
+            border-radius: 0.313rem 0.313rem 0 0;
+        }
+        
+        .image-container img {
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            -moz-transform: translate3d(-50%, -50%, 0);
+            -ms-transform: translate3d(-50%, -50%, 0);
+            -o-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            max-width: none;
+        }
+        
+        .trying {
+            width: 100%;
+            border-radius: 0.313rem 0.313rem 0 0;
+            color: #cecece;
+            -webkit-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.20);
+            box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, .20);
+        }
+        
+        .parallaxs {
+            /* The image used */
+            background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url("images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg");
+            /* Set a specific height */
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax_body {
+            /* The image used */
+            background: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.59)), url("images/austin-distel-mpN7xjKQ_Ns-unsplash.jpg");
+            /* Set a specific height */
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .wai > a > div {
+            margin: 30px 0 30px 0;
+            font-size: 25px;
+            line-height: 25px;
+            text-justify: initial;
+            -webkit-border-radius: 8px 8px 8px 8px;
+            -moz-border-radius: 8px 8px 8px 8px;
+            border-radius: 8px 8px 8px 8px;
+            /* Set a specific height */
+            /* Create the parallax scrolling effect */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 120%;
+            border: 2px solid;
+            border-color: #cecece26;
+        }
+        
+        .wai > a > div:hover {
+            border: 2px solid;
+            border-color: #00cbf7;
+            -webkit-transition: border-color 0.5s ease;
+            -moz-transition: border-color 0.5s ease;
+            -o-transition: border-color 0.5s ease;
+            transition: border-color 0.5s ease;
+        }
+        
+        .wai > a > div:hover {
+            border: 2px solid;
+            border-color: #00cbf7;
+            -webkit-transition: border-color 0.5s ease;
+            -moz-transition: border-color 0.5s ease;
+            -o-transition: border-color 0.5s ease;
+            transition: border-color 0.5s ease;
+        }
+        
+        .imagehover img {
+            height: 100%;
+            width: 100%;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+        
+        .link {
+            font-size: 25px;
+            line-height: 35px;
+            padding: 1.75rem 3.25rem;
+            color: #333;
+        }
+        
+        .trying .link:hover {
+            color: #00cbf7;
+            -webkit-transition: color 0.5s ease;
+            -moz-transition: color 0.5s ease;
+            -o-transition: color 0.5s ease;
+            transition: color 0.5s ease;
+        }
+        
+        .link p {
+            font-size: 17px;
+            line-height: 25px;
+            padding: 10px 0px 0px 0px;
+            color: #333;
+            text-transform: none;
+            font-weight: 400;
+        }
+        
+        .imagehover p {
+            display: none;
+        }
+        
+        .threetags {
+            padding: 20px 60px 20px 60px;
+        }
+        
+        .threetags p {
+            font-size: 19px;
+            margin-bottom: 0px;
+            clear: both;
+            font-family: 'Roboto', sans-serif;
+            padding: 10px 0 40px 0;
+            font-weight: normal;
+        }
+        
+        .frontmod {
+            font-size: 1.15em;
+        }
+        
+        .threetags-icon {
+            width: 160px;
+        }
+        
+        .quickimplementation {
+            position: absolute;
+            right: 0;
+            left: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .services-img {
+            width: 100%;
+                        -webkit-border-radius: 5px 5px 5px 5px;
+            -moz-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+              -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(45%);
+        }
+        
+        .heroBack {
+
+            padding-top: 75px;
+            padding-bottom: 90px;
+            background-size: cover;
+
+        }
+        
+        .heroBack p {
+            color: white;
+            font-size: 1.4em;
+        }
+        
+        .home2sect {
+            padding-top: 50px;
+            padding-bottom: 50px;      
+    }
+        
+        .space {
+            height: 1px;
+            margin: 20px auto;
+            width: 100%;
+        }
+        
+        .container-fluid {
+            padding: 0;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        
+        .show-mob {
+            display: none;
+        }
+        /* modal */
+        
+        .form-control,
+        #forgot-pass .form-control {
+            border-radius: 0;
+            border: 1px solid #808285;
+            margin: 5px auto 30px auto;
+            height: 50px;
+        }
+        
+        .modal-tc-logo {
+            width: 190px;
+            height: auto;
+        }
+        
+        label {
+            font-weight: normal;
+            font-size: 18px;
+        }
+        
+        .selectboxit-container .selectboxit {
+            border: 1px solid #808285;
+        }
+        
+        .selectboxit-container {
+            margin: 5px auto 30px auto;
+        }
+        
+        .selectboxit-text {
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            font-weight: normal;
+            background-color: #0054a6;
+            border: 0;
+            border-radius: 0;
+            color: #fff;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 16px 30px;
+            min-width: 220px;
+            height: auto;
+            text-transform: uppercase;
+            -webkit-transition: background-color 0.3s ease;
+            -moz-transition: background-color 0.3s ease;
+            -o-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            -webkit-transition: background-color 0.3s ease;
+            -moz-transition: background-color 0.3s ease;
+            -o-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
+            color: #0054a6;
+            background-color: #ffffff;
+        }
+        
+        @media (max-width: 480px) {
+            div .text-center > p {
+                text-align: center;
+            }
+            .home2sect {
+                padding: 29px 0 0 0;
+            }
+            .m-left {
+                text-align: left;
+            }
+            .m-right {
+                text-align: right;
+            }
+            .home2sect {
+                padding: 29px 0 0 0;
+            }
+            p {
+                text-align: left;
+            }
+            .show-mob {
+                display: inline-block;
+            }
+            .hide-mob {
+                display: none;
+            }
+            .mob-full {
+                width: 100%;
+            }
+            h1 {
+                font-size: 25px;
+            }
+            /* modal */
+            label {
+                font-weight: normal;
+                font-size: 14px;
+            }
+            .form-control,
+            #forgot-pass .form-control {
+                height: 40px;
+                margin: 5px auto 20px auto;
+            }
+            .container-fluid {
+                padding: 0;
+            }
+        }
+        
+        @media (min-width:768px) {
+            .long-container {
+                width: 750px
+            }
+            .trying {
+                min-height: 0px;
+            }
+        }
+        
+        @media (min-width:992px) {
+            .long-container {
+                width: 970px
+            }
+            .trying {
+                min-height: 0px;
+            }
+        }
+        
+        @media (min-width:1200px) {
+            .long-container {
+                width: 1200px
+            }
+            .trying {
+                min-height: 315px;
+            }
+        }
+        
+        @media (min-width:1400px) {
+            .long-container {
+                width: 1440px
+            }
+            .trying {
+                min-height: 315px;
+            }
+        }
+        
+        @media (max-width: 990px) {
+            .form-left,
+            .form-right {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container-fluid {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+        
+        @media (min-width: 992px) {}
+    </style>
+</head>
+
+<body style="padding-bottom: 40px; background-color: #f7f7f7;">
+    <!--HEADER NAV FOR INSERT-->
+    <header id="header">
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-4 col-sm-2 col-md-2 col-lg-3 pull-left">
+
+                        <div class="logo pull-left">
+
+                            <a href="home.html"> <img src="images/logo.png" alt="Quick Confirm" title="Quick Confirm" width="400" style="height:auto;" class="logo-img" /> </a>
+                        </div>
+
+                        <!--LOGGED IN STATE ONLY-->
+                    </div>
+
+                    <div class="hidden-xs hidden-sm col-md-10 col-lg-9 text-right">
+
+                        <a href="home.html" class="active" target="blank">Welcome</a>
+                        <a href="#.html">What's New!</a>
+                        <a href="#ourservices">Overview</a>
+                        <a href="about.html" target="blank">About Us</a>
+                        <a href="compservices.html" target="blank">Complimentary Services</a>
+                        <a class="section" href="contact.html" target="blank">Contact Us</a>
+
+                        <a href="#whoami" data-toggle="" target="blank">Log In</a>
+                    </div>
+
+                    <!-- MOBILE NAV -->
+                    <div id="mobile-nav" class="visible-sm visible-xs menu dropdown pull-right text-right col-xs-8">
+                        <a class="burger" id="menu-label" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> <span class=" pull-left"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </span> <span class="menu-title text-uppercase pull-left" data-lang="en">MENU</span> </a>
+                        <!-- HIDDEN MOBILE MENU -->
+                        <div class="dropdown-menu mobile-nav-bar" role="menu" aria-labelledby="menu-label">
+                            <ul class="sections main-menu">
+                                <li> <a class="section" href="home.html">Welcome</a> </li>
+                                <li> <a class="section" href="#.html">What's New!</a> </li>
+                                <li> <a class="section" href="home.html#ourservices">Overview</a> </li>
+                                <li> <a class="section" href="about.html">About Us</a> </li>
+                                <li> <a class="section" href="compservices.html">Complimentary Services</a> </li>
+                                <li> <a class="section" href="contact.html">Contact Us</a> </li>
+                                <!-- LOGGED IN STATE ONLY-->
+                            </ul>
+                            <ul class="sections main-menu lower">
+                                <li><a class="section" href="" target="blank"><span class="text-uppercase"></span></span></a> </li>
+                                <li class="mobile-menu-di">
+                                    <hr class="mobile-menu-di">
+                                </li>
+                                <li> <a data-toggle="modal" data-target="#sign-in-modal" id="sign-in-click-mbl" class="section" href="#sign-in">LOG IN</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- MOBILE NAV -->
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--END HEADER NAV FOR INSERT-->
+
+    <!--HERO-->
+    <div class="hero hidden-xs heroBack parallaxs">
+        <div class="contdivider">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 text-center text-white">
+<img style="width:100px; padding: 0px 0 20px 0 " src="images/white_check.png">
+                        <h1 style="font-size:70px; ">Secure fast, accurate verifications</h1><br> 
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--MAIN BODY CONTENT-->
+    <div style="padding:50px; margin: -50px" id="whoami"></div>
+
+    <div   class="contdivider" style="background-color: white;">
+        <div class="long-container ">
+
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 text-center text-white">
+                    <h1 style="font-weight: 500; color:; padding-top: 40px"><b>Who Am I?</b></h1>
+                </div>
+            </div>
+            <div class="row" style="margin: 0 0px 0 0px">
+                <div class="col-lg-3 col-sm-6 col-xs-12 text-center wai">
+                    <a href="login_verifier.html" title="Verifiers, login here">
+                        <div class="trying">
+                            <div class="image-container">
+
+                                <img src="images/Background-3.png" alt="">
+                            </div>
+
+                            <div class="link">Verifiers
+
+                                <p>You are a third party that needs employment or salary verifications for your clients.</p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 text-center wai">
+                    <a href="login_employee.html" title="Employee Login.">
+
+                        <div class="trying">
+                            <div class="image-container">
+
+                                <img src="images/Background-2.png" alt="">
+                            </div>
+
+                            <div class="link">Employees
+                                <p>You are a present or past employee of a Quick Confirm client.</p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 text-center wai">
+                    <a href="login_employer.html" title="Employers, login here.">
+                        <div class="trying">
+                            <div class="image-container">
+
+                                <img src="images/Background-1.png" alt="">
+                            </div>
+
+                            <div class="link">Employer
+                                <p>You are a Quick Confirm client with administrative rights.
+
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 text-center wai">
+                    <a href="login_ssa.html" title="Employers, login here.">
+                        <div class="trying">
+                            <div class="image-container">
+
+                                <img src="images/Background.png" alt="">
+                            </div>
+
+                            <div class="link">Social Services
+                                <p>You have a bona fide request to provide public assistance.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contdivider" style="background-color:#ffffff; padding: 50px 0 55px 0px">
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-center">
+                    <h1>Employment &amp; Salary Verifications</h1>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1 col-sm-1 col-xs-1 form-left text-center hide-mob"></div>
+                <div class="col-lg-10 col-sm-10 col-xs-12 form-left text-center">
+
+                    <p class="frontmod">Need to know how to process <b>verification of employment</b> (voe) or <b>verification of salary</b>?
+
+                        <br>
+                        <br> Quick Confirm enables organizations to automate the process of verifying an employee's job and salary history. It also allows employees to easily and securely release their employment and salary history to third party verifiers. QuickConfirm.com empowers third party verifiers to quickly verify employment and wage information. </p>
+                </div>
+                <div class="col-lg-11 col-sm-11 col-xs-1 form-left text-center hide-mob"></div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: 0;margin-bottom: 0px;" />
+    <div class="contdivider" style=" background-color: #ffffff;background-image: url(images/ecailles.png); background-repeat:repeat; background-position:25% 75%; padding: 0px 0 50px 0">
+        <div style="" class="container main">
+            <div class="row">
+                <div class="col-lg-4 col-sm-4 col-xs-12 form-left text-center threetags">
+                    <img class="threetags-icon" src="images/safetag.png">
+                    <p class="">Security is our
+                        <br> number one priority.
+                        <br>We keep all sensitive
+                        <br> data safe.</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-12 form-left text-center threetags">
+                    <img class="threetags-icon" src="images/clocktag.png">
+                    <p class="">Save your team and business valuable time with secure, fast, accurate online verifications.</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-12 form-left text-center threetags">
+                    <img class="threetags-icon" src="images/supporttag.png">
+                    <p class="">Prompt, Responsive support
+                        <br> through phone or email.
+                        <br> We're here to help</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-center">
+                    <a id="ourservices" class="btn btn-primary" href="contact.html" role="button">Connect With Us</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: 0;margin-bottom: 0px;" />
+    <div class="contdivider" style=" background-color: #ffffff;">
+        <div class="container">
+            <div class="home2sect row">
+                <div class="col-lg-4 col-sm-6 col-xs-12  text-left">
+                    <img class="services-img" src="images/services01.jpg">
+                </div>
+                <div class="col-lg-8 col-sm-6 col-xs-12  text-left">
+                    <h1>Salary and Income Verifications</h1>
+                    <p>QuickConfirm enables organizations to automate the process of verifying an employee's work and salary history.</p>
+                    <p>Employers save valuable time and resources empowering authorized verifiers with access to verify employment and salary for their employees.</p>
+
+                    <p>Salary &amp; Income Verifications are provided at no cost to the employers or their employees.</p>
+                    <p>Each employee can login and create a distinct authorization number that enables verifiers a one-time access to verify salary information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contdivider parallax_body" style=" color: #ffffff;">
+        <div class="container">
+            <div style="" class="home2sect row">
+
+                
+                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 text-center col-lg-offset-2 col-md-offset-2 col-sm-offset-3"><br><br>
+                    <h1 style="color: white">Employment History</h1>
+                    <p>Storing current and previous employee records and salary information is made simple for employers through QuickConfirm. <br>
+                        <img style="width:50px; padding: 20px 0 20px 0 " src="images/white_check.png">
+                    <br>
+
+                    <h1 style="color: white">Social Services Verifications</h1>
+                    <p>QuickConfirm processes social service verifications at no cost to the agency or the employer. We value the agency in need of our services and want to help.</p><br><br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="contdivider " style=" background-color: #ffffff;">
+        <div class="container ">
+            <div class="home2sect row">
+                <div class="col-lg-4 col-sm-6 col-xs-12 text-left">
+                    <img class="services-img" src="images/services03.jpg">
+                </div>
+                <div class="col-lg-8 col-sm-6 col-xs-12 form-left text-left aboutdiv">
+                    <h1>Immigration Letters</h1>
+                    <p>An employer may provide an immigration letter format to QuickConfirm and QuickConfirm will process requests at no cost to the employer or their employee. Our customer service department provides the employee with an official letter of employment on the employer’s letterhead, including verification of salary and an authorized signature.</p>
+
+                    <h1>W2 Current &amp; W2 History</h1>
+                    <p>As an optional service, we can provide current W2 and W2 history of your employees in our secure database.</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #000000; background-image: url(images/gun-metal.png); min-height: 450px;" class="contdivider">
+        <div class="container ">
+            <div class=" row">
+
+                <div style="padding: 30px 0 0 0;" class="col-lg-6 col-sm-6 col-xs-12 form-left text-white text-left">
+                    <h1 style="color: white">Quick Implementation</h1>
+                    <p>Find out how quick our implementation process can be today. We work with your team to walk you through the requirements needed to utlize QuickConfirm's automated service and to ensure a fast accurate process
+                        <br>
+                        <br>Ask to speak to our implementation coordinator to find out how simple our process is.
+                        <br>
+                        <br>Schedule a Demonstration. Call us at 888.505.6745!</p>
+                    <br>
+
+                    <div style="" class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 form-left text-left">
+                            <a class="btn btn-primary" href="contact.html" role="button" style="background-color: none">Contact Us</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background-image: url(images/adults-agreement-beverage-567633.png); height: 450px;" class="quickimplementation col-lg-6 col-sm-6 hidden-xs form-left text-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="foot-logo"> <img src="images/logo.png" width="90" style="height:auto;" alt="Quick Confirm" title="Quick Confirm" class="logo-img" /> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                    Main
+                    <br>
+                    <a href="home.html">Welcome</a>
+                    <br>
+                    <a href="login.html">Log In</a>
+                    <br>
+                    <a href="home.html#ourservices">Our Services</a>
+                    <br>
+                    <a href="about.html">About Us</a>
+                    <br>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                    Support
+                    <br>
+                    <a href="contact.html">Contact Us</a>
+                    <br>
+                    <a href="security.html">Security</a>
+                    <br>
+                    <a href="termsofuse.html">Terms of Use</a>
+                    <br>
+                    <a href="privacy.html">Privacy</a>
+                    <br>
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                    <br>
+                    <a href="compservices.html">Complimentary Sevices</a>
+
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+
+                <div style="padding: 30px 0 10px 0" class="col-lg-12 copy text-center">
+
+                    Copyright © 2007 - 2019 QuickConfirm.com All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="full-overlay hidden-xs hidden-sm hidden-md hidden-lg" style="display: block;"></div>
+    <div class="mobile-nav-overlay"></div>
+    <!--GLOBAL JS-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/boot.min.js"></script>
+    <script src="js/ie10-viewport-bug-fix.js"></script>
+    <script src="js/jquery.selectBoxIt.min.js"></script>
+    <!--PAGE JS-->
+    <script>
+    </script>
+</body>
+
+</html>
