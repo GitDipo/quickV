@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Page description" />
+    <meta name="keywords" content=", " />
+    <meta name="author" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <!--GLOBAL CSS-->
+    <link href="css/boot.min.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/jquery.selectBoxIt.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+
+    <title>Sign Up | Quick Confirm</title>
+    <link rel="icon" href="favicon.ico">
+    <!--TRACKING
+
+-->
+
+    <!--PAGE CSS-->
+    <style>
+        /* Write your page specific CSS here */
+        
+        .prompt {
+            background: #FFFFFF;
+            padding: 5px 5px 45px 5px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .badge {
+            width: auto;
+            height: auto;
+        }
+        
+        .promptheader {
+            font-size: 28px;
+            margin-bottom: 0px;
+            clear: both;
+        }
+        
+        .promptbody {
+            margin-bottom: 0px;
+        }
+        
+        .threetags {
+            padding: 20px 0 0 0;
+        }
+        
+        .threetags p {
+            font-size: 28px;
+            margin-bottom: 0px;
+            clear: both;
+            font-family: 'Actor', sans-serif;
+            font-weight: Bold;
+            color: #ffffff;
+            padding: 20px 0 0 0;
+        }
+        
+        .frontmod {
+            font-size: 1.15em;
+        }
+        
+        .threetags-icon {
+            width: 160px;
+        }
+        
+        .services-img {
+            width: 95%;
+        }
+        
+        .addimage {
+            background: #FFFFFF;
+            height: 414px;
+            border: 1px dashed #999999;
+            vertical-align: middle;
+            float: none;
+            text-align: center;
+        }
+        
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        
+        .center-image {
+            vertical-align: middle;
+        }
+        
+        .closeprompt {
+            margin: 0;
+        }
+        
+        .closeprompt .close {
+            font-size: 20px;
+            color: #808285;
+        }
+        
+        .closeprompt .close:hover {
+            color: #666;
+        }
+        
+        .prompt-info {
+            background-color: #FFFFFF;
+            padding: 15px 10px 15px 10px;
+        }
+        
+        .space {
+            height: 1px;
+            margin: 20px auto;
+            width: 100%;
+        }
+        
+        .edit-icon {
+            color: #808285;
+            padding-top: 8px;
+        }
+        
+        .heroBack {
+            background-image: url(images/meeting-2284501_1920.png);
+            padding-top: 100px;
+            padding-bottom: 100px;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+
+        
+        .btn-primary-share,
+        .btn-primary-share:hover,
+        btn-primary-share:focus,
+        btn-primary-share:active {
+            background-color: #00bff2;
+            border: 0;
+            border-radius: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 10px 30px;
+            /* min-width: 220px; */
+            height: 38px;
+            width: 40%;
+        }
+        
+        .btn-primary-share:hover {
+            color: #fff;
+            background-color: #286090;
+            border-color: #204d74;
+        }
+        
+        .sharetruck {
+            padding: 0px 45px 45px 45px;
+        }
+        
+        .show-mob {
+            display: none;
+        }
+        /* modal */
+        
+        .modal-body h1 {
+            color: #303334;
+        }
+        
+        .modal-body h2 {
+            font-weight: normal;
+            font-family: 'Actor', 'Helvetica Neue', arial, sans-serif;
+            font-size: 30px;
+            margin: 30px 0 20px 0;
+        }
+        
+        .modal-body p {
+            font-size: 18px;
+        }
+        
+        .form-control,
+        #forgot-pass .form-control {
+            border-radius: 0;
+            border: 1px solid #808285;
+            margin: 5px auto 30px auto;
+            height: 50px;
+        }
+        
+        .modal-tc-logo {
+            width: 190px;
+            height: auto;
+        }
+        
+        label {
+            font-weight: normal;
+            font-size: 18px;
+        }
+        
+        .selectboxit-container .selectboxit {
+            border: 1px solid #808285;
+        }
+        
+        .selectboxit-container {
+            margin: 5px auto 30px auto;
+        }
+        
+        .selectboxit-text {
+            font-size: 16px;
+        }
+        
+        .feedback {
+            background-color: #d7ebf7;
+            background-image: url(images/"images/data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%230055a6' fill-opacity='0.12' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .feedback p {
+            font-size: 20px;
+        }
+        
+        .btn-cancel,
+        .btn-cancel:active {
+            background-color: #b4b5b4;
+            border: 0;
+            border-radius: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 10px 30px;
+            min-width: 220px;
+            height: 38px;
+        }
+        
+        .btn-cancel:hover {
+            background-color: #808285;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #00bff2;
+        }
+        
+        .mbl-smaller-txt {
+            font-size: 16px;
+            line-height: 22px;
+            vertical-align: 2px;
+            color: #808285;
+        }
+        
+        .modal-body .btn {
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 480px) {
+            p {
+                text-align: center;
+            }
+            .text-left > p {
+                text-align: left;
+            }
+            .btn-gray-share {
+                width: 100%;
+            }
+            .btn-primary-share {
+                width: 100%;
+            }
+            .prompt-info {
+                background-color: #FFFFFF;
+                padding: 15px 10px 15px 10px;
+                text-align: center;
+            }
+            .show-mob {
+                display: inline-block;
+            }
+            .hide-mob {
+                display: none;
+            }
+            .promptheader {
+                font-size: 20px;
+                margin-top: 10px;
+                margin-bottom: 0px;
+                clear: both;
+            }
+            .mob-full {
+                width: 100%;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            /* modal */
+            label {
+                font-weight: normal;
+                font-size: 14px;
+            }
+            .form-control,
+            #forgot-pass .form-control {
+                height: 40px;
+                margin: 5px auto 20px auto;
+            }
+            .modal-body h2,
+            .modal-body h1 {
+                font-size: 19px;
+            }
+            .container-fluid {
+                padding: 0;
+            }
+            .modal-body p {
+                font-size: 14px;
+            }
+            .btn-cancel,
+            .btn-cancel:hover,
+            .btn-cancel:active {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .mbl-smaller-txt {
+                font-size: 14px;
+                line-height: 22px;
+                vertical-align: 2px;
+            }
+            .modal-body .btn {
+                margin-bottom: 15px;
+                margin-left: 0px;
+            }
+        }
+        
+        @media (max-width: 990px) {
+            .form-left,
+            .form-right {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container-fluid {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+        }
+        
+        @media (min-width: 992px) {}
+    </style>
+</head>
+
+<body style="padding-bottom: 40px">
+    <!--HEADER NAV-->
+ <!--END HEADER NAV-->
+   
+
+
+   
+    <!--HERO-->
+    <div class="hero hidden-xs heroBack">
+        <div class="contdivider">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 text-center text-white">
+                    
+                        <h1>Sign Up</h1>
+                    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--MAIN BODY CONTENT-->
+    <div class="space">
+    </div>
+
+    <div class="contdivider" style="background-color:#ffffff;">
+        <div class="container main">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
+                    <h2>Signing Up As A Verifier</h2>
+                    <p>Quick Confirm provides two payment plans and an invoice option for Verifiers to choose from. Please select your payment plan from three options presented below. Social Services Agencies should contact the Quick Confirm Support number provided and ask to speak to a representative. For any questions, email us at Support@QuickConfirm.com or give us a call at 1 888 505 6745 from 8 A.M. to 5 P.M. EST, Monday - Friday. </p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
+                    <img src="images/card_visa.gif" alt="" width="60" height="38" border="0"> &nbsp;
+                    <img src="images/card_mastercard.gif" alt="" width="60" height="38" border="0"> &nbsp;
+                    <img src="images/card_americanx.gif" alt="" width="60" height="38" border="0"> &nbsp;
+                    <img src="images/card_discover.gif" alt="" width="60" height="38" border="0">
+                </div>
+
+            </div>
+        </div>
+        <div class="contdivider " style="">
+            <div class="container main">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left" style="">
+
+                        <h2>Quick Pay Credit Card Options </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left" style="">
+
+                        <strong>1. Payment Form:</strong> Credit Card "Pay as you Go"
+                        <br>
+                        <br> Allows the Verifier to pay for each transaction on a pay per transaction basis via a Major Credit Card. Verifiers can access employment and salary
+                        <br> information immediately after filling out the online registration form. To open a Pay as you Go credit card account click on the "Setup Credit Card" button bellow.
+
+                        <br>
+                        <br>
+                        <strong>Rates:</strong>
+                        <br> $19.50 per employment verification.
+                        <br> $19.50 per employment and income verification.
+                        <br> $19.50 per employment, income and salary history verification.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-center" style="">
+
+                        <br> <b>or</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left" style="">
+
+                        <strong>2. Payment Form:</strong> Prepay
+                        <br>
+                        <br> Allows the Verifier to Prepay for future verifications via a Major Credit Card.
+                        <br> To open a prepaid account, please click the button below and determine what prepaid amount you wish to purchase, it’s up to you!<br> <br> 
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6 col-xs-8 form-left text-left" style="">
+                        <b>Purchased Value</b>
+                        <br> up to $50
+                        <br> between $50 and $150
+                        <br> between $150 and $250
+                        <br> between $250 and $550
+                        <br> greater than $550
+                        <br>
+                    </div>
+                    <div class="col-lg-7 col-sm-6 col-xs-4 form-left text-left" style="">
+                        <b>Incentive</b>
+                        <br> 0%
+                        <br> 2%
+                        <br> 4%
+                        <br> 7%
+                        <br> 10%
+                        <br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left" style="">
+<br> <br> 
+                        <button type="submit" form="login" class="btn btn-primary">Setup a Prepaid Account</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left" style="">
+
+                        <h2>Invoice Option</h2>
+
+                        <strong>3. Payment Form:</strong> Invoice Only
+
+                        <br>
+                        <br> To open an invoice account, please click the button below to fill out invoice form. An invoice account is charged a <b>$250.00 annual fee</b>. Monthly billing rates are less than those for credit card users. The higher the volume, the lower the transaction rate.<br> <br> 
+
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left" style="">
+
+                                <button type="submit" form="login" class="btn btn-primary">Setup Invoice Account</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="contdivider" style="background-color:#ffffff;">
+        <div class="container main" style="padding: 20px 0 15px 0">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-center">
+                    <img src="images/hipaa.png" width="120" style="height:auto;" alt="HIPAA Compliance" title="HIPAA Compliance" class="" />
+                    <img src="images/pci.png" width="120" style="height:auto;" alt="PCI Compliance" title="PCI Compliance" class="" />
+                    <img src="images/SSAE1611Logo.jpg" width="130" style="height:auto;" alt="SSAE2 Compliance" title="SSAE2 Compliance" class="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="foot-logo"> <img src="images/logo.png" width="90" style="height:auto;" alt="Quick Confirm" title="Quick Confirm" class="logo-img" /> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                    Main
+                    <br>
+                    <a href="home.html">Welcome</a>
+                    <br>
+                    <a href="login.html">Log In</a>
+                    <br>
+                    <a href="home.html#ourservices">Our Services</a>
+                    <br>
+                    <a href="about.html">About Us</a>
+                    <br>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                    Support
+                    <br>
+                    <a href="contact.html">Contact Us</a>
+                    <br>
+                    <a href="security.html">Security</a>
+                    <br>
+                    <a href="termsofuse.html">Terms of Use</a>
+                    <br><a href="privacy.html">Privacy</a>
+                    <br>
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                                     <br>
+                    <a href="compservices.html">Complimentary Sevices</a>
+                 
+                 
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div style="padding: 30px 0 10px 0" class="col-lg-12 copy text-center">
+                    Copyright © 2007 - 2019 QuickConfirm.com All Rights Reserved
+                </div>
+            </div>
+    </footer>
+    <div class="full-overlay hidden-xs hidden-sm hidden-md hidden-lg" style="display: block;"></div>
+    <div class="mobile-nav-overlay"></div>
+    <!--GLOBAL JS-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/boot.min.js"></script>
+    <script src="js/ie10-viewport-bug-fix.js"></script>
+    <script src="js/jquery.selectBoxIt.min.js"></script>
+    <!--PAGE JS-->
+    <script>
+    </script>
+</body>
+
+</html>

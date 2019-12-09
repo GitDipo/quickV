@@ -14,7 +14,7 @@
     <link href="css/boot.min.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
-    <title>Complimentary Services | Quick Confirm</title>
+    <title>Log In | Quick Confirm</title>
     <link rel="icon" href="favicon.ico">
 
     <!--TRACKING
@@ -24,106 +24,105 @@
     <!--PAGE CSS-->
     <style>
         /* Write your page specific CSS here */
-
+        
         .prompt {
             background: #FFFFFF;
             padding: 5px 5px 45px 5px;
             text-align: center;
             color: #333;
         }
-
+        
         .badge {
             width: auto;
             height: auto;
         }
-
+        
         .promptheader {
             font-size: 28px;
             margin-bottom: 0px;
             clear: both;
         }
+        
         .modal-content1 {
             width: 100%;
             margin: 0;
         }
-
+        
         .promptbody {
             margin-bottom: 0px;
         }
-
+        
         .ssa-copy {
             margin-top: 8%;
-            width: 70%;
+            width: 95%;
             margin-right: auto;
             margin-left: auto;
+            text-align: left;
         }
-
+        
         .frontmod {
             font-size: 1.15em;
         }
-
+        
         .helper {
             display: inline-block;
             height: 100%;
             vertical-align: middle;
         }
-
+        
         .center-image {
             vertical-align: middle;
         }
-
+        
         .closeprompt {
             margin: 0;
         }
-
+        
         .closeprompt .close {
             font-size: 20px;
             color: #808285;
         }
-
+        
         .closeprompt .close:hover {
             color: #666;
         }
+        
         .Mborder {
             margin-top: 8%;
-            width: 70%;
+            width: 100%;
             margin-right: auto;
             margin-left: auto;
-
-    background-color: #fff;
-
-    border: 1px solid #999;
-
-
+            background-color: #fff;
+            border: 1px solid #999;
         }
-
+        
         .prompt-info {
             background-color: #FFFFFF;
             padding: 15px 10px 15px 10px;
         }
-
+        
         .space {
             height: 1px;
-            margin: 17px auto;
+            margin: 20px auto;
             width: 100%;
         }
-
+        
         .edit-icon {
             color: #808285;
             padding-top: 8px;
         }
-
+        
         .edit-icon img {
             padding: 0px 7px 0px 0px;
             color: #808285;
         }
-
+        
         .truck-story {
             width: 100%;
             padding: 15px;
             resize: none;
         }
-
+        
         .btn-gray,
         .btn-gray:hover,
         btn-gray:focus,
@@ -139,7 +138,7 @@
             min-width: 220px;
             height: 38px;
         }
-
+        
         .btn-default,
         .btn-default:hover {
             background-color: #0055a6;
@@ -148,7 +147,7 @@
             color: #fff;
             font-weight: bold;
         }
-
+        
         .btn-gray-share,
         .btn-gray-share:hover,
         btn-gray-share:focus,
@@ -165,13 +164,13 @@
             height: 38px;
             width: 40%;
         }
-
+        
         .btn-gray-share:hover {
             color: #fff;
             background-color: #286090;
             border-color: #204d74;
         }
-
+        
         .btn-primary-share,
         .btn-primary-share:hover,
         btn-primary-share:focus,
@@ -188,42 +187,33 @@
             height: 38px;
             width: 40%;
         }
-
+        
         .btn-primary-share:hover {
             color: #fff;
             background-color: #286090;
             border-color: #204d74;
         }
-
+        
         .show-mob {
             display: none;
         }
         /* modal */
-
+        
         .modal-body h1 {
             color: #303334;
         }
-
-                    .heroBack {
-            background-image: url(images/blurred-background-close-up-coffee-cup-908284.png);
-
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
+        
         .modal-body h2 {
             font-weight: normal;
             font-family: 'Actor', 'Helvetica Neue', arial, sans-serif;
             font-size: 30px;
             margin: 30px 0 20px 0;
         }
-
+        
         .modal-body p {
             font-size: 18px;
         }
-
+        
         .form-control,
         #forgot-pass .form-control {
             border-radius: 0;
@@ -231,29 +221,29 @@
             margin: 5px auto 30px auto;
             height: 50px;
         }
-
+        
         .modal-tc-logo {
             width: 190px;
             height: auto;
         }
-
+        
         label {
             font-weight: normal;
             font-size: 18px;
         }
-
+        
         .selectboxit-container .selectboxit {
             border: 1px solid #808285;
         }
-
+        
         .selectboxit-container {
             margin: 5px auto 30px auto;
         }
-
+        
         .selectboxit-text {
             font-size: 16px;
         }
-
+        
         .btn-cancel,
         .btn-cancel:active {
             background-color: #b4b5b4;
@@ -267,39 +257,42 @@
             min-width: 220px;
             height: 38px;
         }
-
+        
         .btn-cancel:hover {
             background-color: #808285;
             color: #fff;
         }
-
+        
         .btn-primary:hover {
             background-color: #00bff2;
         }
-
+        
         .mbl-smaller-txt {
             font-size: 16px;
             line-height: 22px;
             vertical-align: 2px;
             color: #808285;
         }
-
+        
         .modal-body .btn {
             margin-bottom: 15px;
             margin-left: 10px;
         }
-
+        
         .login-toggle label {
             width: 90%;
         }
-
+        
         input[type="checkbox"],
         input[type="radio"] .login-radio {
             box-sizing: border-box;
             padding: 10px;
         }
-
+        
         @media (max-width: 480px) {
+            .text-left > p {
+                text-align: left;
+            }
             p {
                 text-align: center;
             }
@@ -308,6 +301,12 @@
             }
             .btn-primary-share {
                 width: 100%;
+            }
+            .m-left {
+                text-align: left;
+            }
+            .m-right {
+                text-align: right;
             }
             .sharetruck {
                 padding: 15px;
@@ -379,7 +378,7 @@
                 margin-left: 0px;
             }
         }
-
+        
         @media (max-width: 990px) {
             .form-left,
             .form-right {
@@ -387,34 +386,37 @@
                 padding-right: 15px;
             }
         }
-
+        
         @media (min-width: 768px) {
             .container-fluid {
                 padding-left: 60px;
                 padding-right: 60px;
             }
         }
-
+        
         @media (min-width: 992px) {}
         /* toggle buttons  */
-
+           .login-toggle a {
+            width: 90%;
+        }
+        
         .login-toggle {
             overflow: hidden;
         }
         /* Customize the label (the container) */
-
+        
         .login-toggle {
             display: block;
             position: relative;
             margin-bottom: 12px;
             cursor: pointer;
-            font-size: 22px;
+            font-size: 18px;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
         }
-
+        
         .login-toggle input {
             position: absolute !important;
             clip: rect(0, 0, 0, 0);
@@ -423,44 +425,152 @@
             border: 0;
             overflow: hidden;
         }
-
+        
         .login-toggle label {
             float: left;
         }
-
-        .login-toggle label {
+        
+        .login-toggle a {
             display: inline-block;
             padding: 6px 14px;
+            color: black;
+            font-weight: normal;
             -webkit-transition: all 0.1s ease-in-out;
             -moz-transition: all 0.1s ease-in-out;
             -ms-transition: all 0.1s ease-in-out;
             -o-transition: all 0.1s ease-in-out;
             transition: all 0.1s ease-in-out;
         }
-
-        .login-toggle label:hover {
+        
+        .login-toggle a:hover {
             cursor: pointer;
+             background-color: #00bff2;
+            -webkit-box-shadow: none;
+            box-shadow: none;
         }
-
-        .login-toggle input:checked + label {
+        
+        .login-toggle a.current {
             background-color: #00bff2;
             -webkit-box-shadow: none;
             box-shadow: none;
         }
-
+        
         .login-toggle label:first-of-type {
             border-radius: 4px 0 0 4px;
         }
-
+        
         .login-toggle label:last-of-type {
             border-radius: 0 4px 4px 0;
         }
     </style>
 </head>
 
-<body class="">
+<body style="padding-bottom: 40px">
     <!-- Find Company Code -->
+    <div id="company-code-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-70p">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
 
+                    <h1 class="modal-title text-center">Search For Company Code</h1>
+                    <form id="searchcocode">
+                        <div class="form-group text-left">
+                            <p style="font-size: 15px">Use the text box below to search for the company code by name. You can enter the entire company name or the first few letters. For example, type in Al for Allied Media Products, Inc.</p>
+                            <input type="coname" required class="form-control" id="company-name" placeholder="Company Name">
+                        </div>
+                        <div class="form-group text-center">
+
+                            <button type="submit" form="searchcocode" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                    <div class="divider"></div>
+                    <h1 class="modal-title text-center">Find Company Code</h1>
+                    <div class="form-group text-left">
+                        <p style="font-size: 15px">You can click the first letter or number of the company name from the list of characters below. All company names that start with the number or letter selected will appear.</p>
+                    </div>
+                    <div class="form-group text-center">
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=1">1 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=2">2 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=3">3 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=4">4 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=5">5 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=6">6 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=7">7 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=8">8 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=9">9 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=A">A </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=B">B </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=C">C </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=D">D </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=E">E </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=F">F </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=G">G </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=H">H </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=I">I </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=J">J </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=K">K </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=L">L </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=M">M </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=N">N </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=O">O </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=P">P </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=Q">Q </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=R">R </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=S">S </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=T">T </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=U">U </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=V">V </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=W">W </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=X">X </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=Y">Y </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=Z">Z </a>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer text-center"> </div>
+            </div>
+        </div>
+
+    </div>
     <!--HEADER NAV-->
     <!--END HEADER NAV-->
 
@@ -468,45 +578,89 @@
 
     <!--MAIN BODY CONTENT-->
     <div class="space"></div>
-         <!--<div class="contdivider" style="background-color:#ffffff;" >
+    <div class="contdivider" style="background-color:#ffffff;">
         <div class="container main">
             <div class="row">
-                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
-                    <div id="right">
+                 <div class="col-lg-6 col-sm-6  form-left text-left ">
+                    <h1>Log In As:<span style="font-weight: normal;color: gray;">(Select your role) </span></h1>
 
-                     <img width="100%" src="blurred-background-close-up-coffee-cup-908284.png">
-
+                   
+                    <div class="login-toggle">
+                        
+                        <a class="current" href="login_verifier.html"><b>Verifier</b>
+                            <br> Verify Someone's Employment and Income
+                        </a>
                     </div>
+                    <div class="login-toggle">
+                        
+                        <a href="login_employee.html" ><b>Employee</b>
+                            <br> Review Your Employee Information
+                            <br> Release Your Salary Information
+                        </a>
+                    </div>
+                    <div class="login-toggle">
+                        
+                        <a href="login_employer.html" ><b>Employer</b>
+                            <br> Need to Automate Employment and Salary Verifications for your Company? Want to Learn More
+                        </a>
+                    </div>
+                    <div class="login-toggle">
 
+                        <a href="login_ssa.html"><b>Social Service Agency</b>
+                            <br>Do You Provide Public Assistance and need a Verification for your Client? Click here for explanations
+                        </a>
+                    </div>
+                   
                 </div>
-            </div>
-        </div>
-    </div>-->
-    
-    <div class="contdivider " style="background-color:#ffffff;" >
-        <div class="container main">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
-                    <div id="right">
-                                        <h2>Complementary Services</h2>
-                        <p>QuickConfirm works with providers of services that complement our offering. The service categories follow.</p>
-                        <p><b>Complementary Service Offerings<br>
-Unemployment Claims/Unemployment Insurance (UC/UI)<br>
-Electronic and printed W2s<br>
-Official Letters of Employment<br>
-I9/E-Verify</b><br>
-</p>
-                        <p>Should you wish to inquire about these additional services contact us at sales@quickconfirm.com or call us at <a href="tel:888-505-6745">888-505-6745</a> and press 4 to be routed to one of our account management professionals.</p>
+                <div class="col-lg-6 col-sm-6  form-left text-center ">
 
+                    <div class="login-div text-center" tabindex="-1" role="dialog">
+                        <div class="modal-70p Mborder">
+                            <div class=" text-center">
+                                <div class="modal-body">
 
+                                    <form id="login">
+                                        <div class="form-group text-center">
+                                            <div id="hide-ver" class="custom-control custom-radio hide-ver">
+                                                <input type="userid" required class="form-control" id="user-id" placeholder="User ID">
+                                            </div>
 
+                                        
+                                            <input type="password" required class="form-control" id="pass" placeholder="Password">
+                                            <p class="text-left modal-form-link"><a href="forgotpass.html" data-toggle="" data-target="" id="f">Forgot my password?</a></p>
+                                            <button type="submit" form="login" class="btn btn-primary">Enter</button>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
+         
 
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="contdivider" style="background-color:#ffffff;">
+        <div class="container main">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
+                    <p>Need Help?
+                        <br> If you have any questions, email us at Support@QuickConfirm.com or give us a call at 1 888 505 6745 from 8 A.M. to 5 P.M. Eastern Standard Time, Monday through Friday.</p>
+
+                    <p>Do Not Have an Account With Us?
+                        <br>
+                        <a href="contact.html">Obtain more information</a> if you are a verifier wanting to establish an account for the first time. Concerned about <a href="security.html">Security?</a></p>
+
+                    <p>Learn more about Quick Confirm's security features.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--FOOTER-->
     <footer class="footer">
@@ -521,30 +675,32 @@ I9/E-Verify</b><br>
                     Main
                     <br>
                     <a href="home.html">Welcome</a>
-                    <br />
+                    <br>
                     <a href="login.html">Log In</a>
-                    <br />
+                    <br>
                     <a href="home.html#ourservices">Our Services</a>
-                    <br />
+                    <br>
                     <a href="about.html">About Us</a>
-                    <br />
+                    <br>
                 </div>
                 <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
                     Support
                     <br>
                     <a href="contact.html">Contact Us</a>
-                    <br />
+                    <br>
                     <a href="security.html">Security</a>
-                    <br />
+                    <br>
                     <a href="termsofuse.html">Terms of Use</a>
-                    <br />
+                    <br>
                     <a href="privacy.html">Privacy</a>
-                    <br />
+                    <br>
                 </div>
 
-                               <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
                                      <br>
                     <a href="compservices.html">Complimentary Sevices</a>
+                    <br>
+                    <a href="faq.html">Frequently Asked Questions</a>
                  
                  
                     <br>
@@ -562,14 +718,16 @@ I9/E-Verify</b><br>
     <!--PAGE JS-->
 
     <script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/boot.min.js"></script>
-<script src="js/ie10-viewport-bug-fix.js"></script>
-<script src="js/jquery.selectBoxIt.min.js"></script>
-
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/boot.min.js"></script>
+    <script src="js/ie10-viewport-bug-fix.js"></script>
+    <script src="js/jquery.selectBoxIt.min.js"></script>
 
     <!--GLOBAL JS-->
+    <script>
 
+
+    </script>
 </body>
 
 </html>

@@ -13,8 +13,10 @@
     <!--GLOBAL CSS-->
     <link href="css/boot.min.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
+
     <link href="css/global.css" rel="stylesheet">
-    <title>Complimentary Services | Quick Confirm</title>
+
+    <title>Privacy</title>
     <link rel="icon" href="favicon.ico">
 
     <!--TRACKING
@@ -24,154 +26,103 @@
     <!--PAGE CSS-->
     <style>
         /* Write your page specific CSS here */
-
+        
         .prompt {
             background: #FFFFFF;
             padding: 5px 5px 45px 5px;
             text-align: center;
             color: #333;
         }
-
+        
         .badge {
             width: auto;
             height: auto;
         }
-
+        
         .promptheader {
             font-size: 28px;
             margin-bottom: 0px;
             clear: both;
         }
-        .modal-content1 {
-            width: 100%;
-            margin: 0;
-        }
-
+        
         .promptbody {
             margin-bottom: 0px;
         }
-
-        .ssa-copy {
-            margin-top: 8%;
-            width: 70%;
-            margin-right: auto;
-            margin-left: auto;
+        
+        .threetags {
+            padding: 20px 0 0 0;
         }
-
+        
+        .threetags p {
+            font-size: 28px;
+            margin-bottom: 0px;
+            clear: both;
+            font-family: 'Actor', sans-serif;
+            font-weight: Bold;
+            color: #ffffff;
+            padding: 20px 0 0 0;
+        }
+        
         .frontmod {
             font-size: 1.15em;
         }
-
+        
+        .threetags-icon {
+            width: 160px;
+        }
+        
+        .services-img {
+            width: 95%;
+        }
+        
+        .addimage {
+            background: #FFFFFF;
+            height: 414px;
+            border: 1px dashed #999999;
+            vertical-align: middle;
+            float: none;
+            text-align: center;
+        }
+        
         .helper {
             display: inline-block;
             height: 100%;
             vertical-align: middle;
         }
-
+        
         .center-image {
             vertical-align: middle;
         }
-
+        
         .closeprompt {
             margin: 0;
         }
-
+        
         .closeprompt .close {
             font-size: 20px;
             color: #808285;
         }
-
+        
         .closeprompt .close:hover {
             color: #666;
         }
-        .Mborder {
-            margin-top: 8%;
-            width: 70%;
-            margin-right: auto;
-            margin-left: auto;
-
-    background-color: #fff;
-
-    border: 1px solid #999;
-
-
-        }
-
+        
         .prompt-info {
             background-color: #FFFFFF;
             padding: 15px 10px 15px 10px;
         }
-
+        
         .space {
             height: 1px;
-            margin: 17px auto;
+            margin: 20px auto;
             width: 100%;
         }
-
+        
         .edit-icon {
             color: #808285;
             padding-top: 8px;
         }
-
-        .edit-icon img {
-            padding: 0px 7px 0px 0px;
-            color: #808285;
-        }
-
-        .truck-story {
-            width: 100%;
-            padding: 15px;
-            resize: none;
-        }
-
-        .btn-gray,
-        .btn-gray:hover,
-        btn-gray:focus,
-        btn-gray:active {
-            background-color: #9c9ea2;
-            border: 0;
-            border-radius: 0;
-            color: #fff;
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 16px;
-            padding: 10px 30px;
-            min-width: 220px;
-            height: 38px;
-        }
-
-        .btn-default,
-        .btn-default:hover {
-            background-color: #0055a6;
-            border: 0;
-            border-radius: 0;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .btn-gray-share,
-        .btn-gray-share:hover,
-        btn-gray-share:focus,
-        btn-gray-share:active {
-            background-color: #9c9ea2;
-            border: 0;
-            border-radius: 0;
-            color: #fff;
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 16px;
-            padding: 10px 30px;
-            /* min-width: 220px; */
-            height: 38px;
-            width: 40%;
-        }
-
-        .btn-gray-share:hover {
-            color: #fff;
-            background-color: #286090;
-            border-color: #204d74;
-        }
-
+        
         .btn-primary-share,
         .btn-primary-share:hover,
         btn-primary-share:focus,
@@ -188,42 +139,37 @@
             height: 38px;
             width: 40%;
         }
-
+        
         .btn-primary-share:hover {
             color: #fff;
             background-color: #286090;
             border-color: #204d74;
         }
-
+        
+        .sharetruck {
+            padding: 0px 45px 45px 45px;
+        }
+        
         .show-mob {
             display: none;
         }
         /* modal */
-
+        
         .modal-body h1 {
             color: #303334;
         }
-
-                    .heroBack {
-            background-image: url(images/blurred-background-close-up-coffee-cup-908284.png);
-
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
+        
         .modal-body h2 {
             font-weight: normal;
             font-family: 'Actor', 'Helvetica Neue', arial, sans-serif;
             font-size: 30px;
             margin: 30px 0 20px 0;
         }
-
+        
         .modal-body p {
             font-size: 18px;
         }
-
+        
         .form-control,
         #forgot-pass .form-control {
             border-radius: 0;
@@ -231,29 +177,29 @@
             margin: 5px auto 30px auto;
             height: 50px;
         }
-
+        
         .modal-tc-logo {
             width: 190px;
             height: auto;
         }
-
+        
         label {
             font-weight: normal;
             font-size: 18px;
         }
-
+        
         .selectboxit-container .selectboxit {
             border: 1px solid #808285;
         }
-
+        
         .selectboxit-container {
             margin: 5px auto 30px auto;
         }
-
+        
         .selectboxit-text {
             font-size: 16px;
         }
-
+        
         .btn-cancel,
         .btn-cancel:active {
             background-color: #b4b5b4;
@@ -267,54 +213,37 @@
             min-width: 220px;
             height: 38px;
         }
-
+        
         .btn-cancel:hover {
             background-color: #808285;
             color: #fff;
         }
-
+        
         .btn-primary:hover {
             background-color: #00bff2;
         }
-
+        
         .mbl-smaller-txt {
             font-size: 16px;
             line-height: 22px;
             vertical-align: 2px;
             color: #808285;
         }
-
+        
         .modal-body .btn {
             margin-bottom: 15px;
             margin-left: 10px;
         }
-
-        .login-toggle label {
-            width: 90%;
-        }
-
-        input[type="checkbox"],
-        input[type="radio"] .login-radio {
-            box-sizing: border-box;
-            padding: 10px;
-        }
-
+        
         @media (max-width: 480px) {
             p {
-                text-align: center;
+                text-align: left;
             }
             .btn-gray-share {
                 width: 100%;
             }
             .btn-primary-share {
                 width: 100%;
-            }
-            .sharetruck {
-                padding: 15px;
-            }
-            .addimage {
-                background: #FFFFFF;
-                height: 215px;
             }
             .prompt-info {
                 background-color: #FFFFFF;
@@ -338,10 +267,6 @@
             }
             h1 {
                 font-size: 22px;
-            }
-            .sharetruck h1 {
-                font-size: 22px;
-                margin-top: 0px;
             }
             /* modal */
             label {
@@ -379,7 +304,7 @@
                 margin-left: 0px;
             }
         }
-
+        
         @media (max-width: 990px) {
             .form-left,
             .form-right {
@@ -387,80 +312,19 @@
                 padding-right: 15px;
             }
         }
-
+        
         @media (min-width: 768px) {
             .container-fluid {
                 padding-left: 60px;
                 padding-right: 60px;
             }
         }
-
+        
         @media (min-width: 992px) {}
-        /* toggle buttons  */
-
-        .login-toggle {
-            overflow: hidden;
-        }
-        /* Customize the label (the container) */
-
-        .login-toggle {
-            display: block;
-            position: relative;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 22px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        .login-toggle input {
-            position: absolute !important;
-            clip: rect(0, 0, 0, 0);
-            height: 1px;
-            width: 1px;
-            border: 0;
-            overflow: hidden;
-        }
-
-        .login-toggle label {
-            float: left;
-        }
-
-        .login-toggle label {
-            display: inline-block;
-            padding: 6px 14px;
-            -webkit-transition: all 0.1s ease-in-out;
-            -moz-transition: all 0.1s ease-in-out;
-            -ms-transition: all 0.1s ease-in-out;
-            -o-transition: all 0.1s ease-in-out;
-            transition: all 0.1s ease-in-out;
-        }
-
-        .login-toggle label:hover {
-            cursor: pointer;
-        }
-
-        .login-toggle input:checked + label {
-            background-color: #00bff2;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-        }
-
-        .login-toggle label:first-of-type {
-            border-radius: 4px 0 0 4px;
-        }
-
-        .login-toggle label:last-of-type {
-            border-radius: 0 4px 4px 0;
-        }
     </style>
 </head>
 
-<body class="">
-    <!-- Find Company Code -->
-
+<body style="padding-bottom: 40px">
     <!--HEADER NAV-->
     <!--END HEADER NAV-->
 
@@ -468,45 +332,64 @@
 
     <!--MAIN BODY CONTENT-->
     <div class="space"></div>
-         <!--<div class="contdivider" style="background-color:#ffffff;" >
+    <div class="contdivider" style="background-color:#ffffff;">
         <div class="container main">
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
-                    <div id="right">
 
-                     <img width="100%" src="blurred-background-close-up-coffee-cup-908284.png">
+                    <h1>Privacy Policy</h1>
 
-                    </div>
+                    <p>Use of Data
+                        <p>QuickConfirm is a leading provider of employment and salary verifications. QuickConfirm adheres to a strict policy that all data belongs to the employer and their employees, as such QuickConfirm never sells or otherwise distributes this data to any third party.</p>
+
+                        <p>Third parties requesting an employment or salary verification must be an authorized verifier and must have authorization from the owner of the data, the employee, in order to obtain salary information.</p>
+
+                        <p>QuickConfirm never sells or distributes employee data in any manner other than through the website to authorized verifiers or the employees of clients who have access (at no cost) to their own personal data.</p>
+
+                        <p>QuickConfirm does not permit batch searches. All clients’ data is stored in a unique database instance and is never commingled.</p>
+
+                        <p>It is the employer's responsibility to provide accurate data, QuickConfirm never alters data in any manner. In instances where data is inaccurate, employees are advised to contact their payroll or human resource department in order to have their data verified or corrected.</p>
+
+                        <p>Data is provided for permissible purposes under the Fair Credit Reporting Act (FCRA), to verify current and past employment and salary. In cases where an employer provides salary history, that data may also be requested. All requestors must attest to compliance with FCRA before any verification is provided.</p>
+
+                        <p><b>Commitment to Privacy</b></p>
+                        <p>QuickConfirm respects the privacy of all information that is safeguarded on behalf of clients and their employees. QuickConfirm’s servers are PCI and HIPAA compliant. Security measures are continuously reviewed and updated as circumstances dictate. Data is stored in an encrypted format and any movement of data is encrypted a second time to ensure the safety and privacy of all information.</p>
+
+                        <p><b>Use of information</b></p>
+                        <p>When a request is made by an authorized verifier, the process requires a logon, including a User ID and a password. This information is maintained by the verifier and can be changed by the verifier on the website. If for some reason a party is unable to recall their password, an email to support@quickconfirm.com can be sent for the password to be reset. Resets are addressed after the requesting party’s identity has been verified. Any reset password must be changed by the end user upon their initial use of the reset password.</p>
+
+                        <p>If the UID is forgotten, it can be requested by emailing Support@QuickConfirm.com . The ID will be provided after the requester's identity has been verified.</p>
+
+                        <p>QuickConfirm never stores credit card information, if a credit card is used to pay for a transaction, that information is removed from the system upon transaction completion. All transactions follow secure protocols including SSL with 256 Bit encryption, all key data within the database is encrypted.</p>
+
+                        <p>Backup data stored offsite is re-encrypted as a further assurance of privacy protection.</p>
+
+                        <p>QuickConfirm does not use, request or store any PHI or health related data.</p>
+
+                        <p><b>Data Storage and Staff</b></p>
+                        <p>All data is domiciled with the continental United States. All staff are located within the Continental United States. Customer Service provides support across all 50 states and Puerto Rico.</p>
+
+                        <p><b>Other services</b></p>
+                        <p>In addition to employment and salary verifications QuickConfirm provides immigration letters. Unemployment Insurance, W-2s and other related services are provided through partners. QuickConfirm does provide eW2s as an integral part of its offering</p>
+                        <br>
+                        <br>
+                        <p style="font-size: 12px"><b>Changes to the policy</b>
+                            <br> Changes to the policy are identified by the updated date in the footer of the policy.
+                            <br>
+                            <br>
+
+                        </p>
 
                 </div>
             </div>
-        </div>
-    </div>-->
-    
-    <div class="contdivider " style="background-color:#ffffff;" >
-        <div class="container main">
             <div class="row">
-                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
-                    <div id="right">
-                                        <h2>Complementary Services</h2>
-                        <p>QuickConfirm works with providers of services that complement our offering. The service categories follow.</p>
-                        <p><b>Complementary Service Offerings<br>
-Unemployment Claims/Unemployment Insurance (UC/UI)<br>
-Electronic and printed W2s<br>
-Official Letters of Employment<br>
-I9/E-Verify</b><br>
-</p>
-                        <p>Should you wish to inquire about these additional services contact us at sales@quickconfirm.com or call us at <a href="tel:888-505-6745">888-505-6745</a> and press 4 to be routed to one of our account management professionals.</p>
-
-
-
-                    </div>
-
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-center">
+                    Created July 2010
+                    <br> Updated March 2018
                 </div>
             </div>
         </div>
     </div>
-
 
     <!--FOOTER-->
     <footer class="footer">
@@ -521,36 +404,33 @@ I9/E-Verify</b><br>
                     Main
                     <br>
                     <a href="home.html">Welcome</a>
-                    <br />
+                    <br>
                     <a href="login.html">Log In</a>
-                    <br />
+                    <br>
                     <a href="home.html#ourservices">Our Services</a>
-                    <br />
+                    <br>
                     <a href="about.html">About Us</a>
-                    <br />
+                    <br>
                 </div>
                 <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
                     Support
                     <br>
                     <a href="contact.html">Contact Us</a>
-                    <br />
+                    <br>
                     <a href="security.html">Security</a>
-                    <br />
+                    <br>
                     <a href="termsofuse.html">Terms of Use</a>
-                    <br />
-                    <a href="privacy.html">Privacy</a>
-                    <br />
-                </div>
-
-                               <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
-                                     <br>
-                    <a href="compservices.html">Complimentary Sevices</a>
-                 
-                 
+                    <br><a href="privacy.html">Privacy</a>
                     <br>
                 </div>
-                
-            </div><div class="row">
+
+                <div class="col-lg-4 col-sm-4 col-xs-4 foot-links-left">
+                    <br>
+                    <a href="compservices.html">Complimentary Sevices</a>
+
+                    <br>
+                </div>
+                <div class="row">
                     <div style="padding: 30px 0 10px 0" class="col-lg-12 copy text-center">
                         Copyright © 2007 - 2019 QuickConfirm.com All Rights Reserved
                     </div>
@@ -558,18 +438,15 @@ I9/E-Verify</b><br>
     </footer>
     <div class="full-overlay hidden-xs hidden-sm hidden-md hidden-lg" style="display: block;"></div>
     <div class="mobile-nav-overlay"></div>
-
-    <!--PAGE JS-->
-
-    <script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/boot.min.js"></script>
-<script src="js/ie10-viewport-bug-fix.js"></script>
-<script src="js/jquery.selectBoxIt.min.js"></script>
-
-
     <!--GLOBAL JS-->
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/boot.min.js"></script>
+    <script src="js/ie10-viewport-bug-fix.js"></script>
+    <script src="js/jquery.selectBoxIt.min.js"></script>
+    <!--PAGE JS-->
+    <script>
+    </script>
 </body>
 
 </html>

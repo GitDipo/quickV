@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Page description" />
+    <meta name="keywords" content=", " />
+    <meta name="author" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <!--GLOBAL CSS-->
+    <link href="css/boot.min.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <title>Log In | Quick Confirm</title>
+    <link rel="icon" href="favicon.ico">
+
+    <!--TRACKING
+
+-->
+
+    <!--PAGE CSS-->
+    <style>
+        /* Write your page specific CSS here */
+        
+        body {
+            color: #fff;
+        }
+        
+        .heroBack {
+            background-image: url(images/room-3m9132_mMSQ-unsplash_Copy.png);
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .Mborder {
+            margin-top: 8%;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        form a,
+        form a:visited,
+        form a:focus {
+            color: white;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        
+        form a:hover,
+        form a:focus {
+            color: #00bff2;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        
+        .modal-form-link:hover {
+            text-decoration: none;
+        }
+        
+        .space {
+            height: 1px;
+            margin: 20px auto;
+            width: 100%;
+        }
+        
+        .show-mob {
+            display: none;
+        }
+        /* modal */
+        
+        .modal-body h1 {
+            color: #303334;
+        }
+        
+        .modal-body h2 {
+            font-weight: normal;
+            font-family: 'Actor', 'Helvetica Neue', arial, sans-serif;
+            font-size: 30px;
+            margin: 30px 0 20px 0;
+        }
+        
+        .modal-body p {
+            font-size: 18px;
+        }
+        
+        .form-control,
+        #forgot-pass .form-control {
+            border-radius: 0;
+            border: 1px solid #808285;
+            margin: 5px auto 30px auto;
+            height: 50px;
+        }
+        
+        .modal-tc-logo {
+            width: 190px;
+            height: auto;
+        }
+        
+        label {
+            font-weight: normal;
+            font-size: 18px;
+        }
+        
+        .selectboxit-container .selectboxit {
+            border: 1px solid #808285;
+        }
+        
+        .selectboxit-container {
+            margin: 5px auto 30px auto;
+        }
+        
+        .selectboxit-text {
+            font-size: 16px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #00bff2;
+        }
+        
+        .modal-body .btn {
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        
+        input[type="checkbox"],
+        input[type="radio"] .login-radio {
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        
+        @media (max-width: 480px) {
+            .text-left > p {
+                text-align: left;
+            }
+            p {
+                text-align: center;
+            }
+            .m-left {
+                text-align: left;
+            }
+            .m-right {
+                text-align: right;
+            }
+            .show-mob {
+                display: inline-block;
+            }
+            .hide-mob {
+                display: none;
+            }
+            .mob-full {
+                width: 100%;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            /* modal */
+            label {
+                font-weight: normal;
+                font-size: 14px;
+            }
+            .form-control,
+            #forgot-pass .form-control {
+                height: 40px;
+                margin: 5px auto 20px auto;
+            }
+            .modal-body h2,
+            .modal-body h1 {
+                font-size: 19px;
+            }
+            .container-fluid {
+                padding: 0;
+            }
+            .modal-body p {
+                font-size: 14px;
+            }
+            .modal-body .btn {
+                margin-bottom: 15px;
+                margin-left: 0px;
+            }
+        }
+        
+        @media (max-width: 990px) {
+            .form-left,
+            .form-right {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container-fluid {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+        }
+        
+        @media (min-width: 992px) {}
+        /* toggle buttons  */
+        /* Customize the label (the container) */
+
+        @media (max-width: 768px) {
+        #header {
+    border-bottom: 0px solid #b2b2b2;
+}}
+        .login-toggle {
+            font-size: 15px;
+            display: block;
+            position: relative;
+            margin-bottom: -12px;
+            font-weight: normal;
+            padding: 10px 0 0 0;
+        }
+        
+        .login {
+            background-color: rgba(147, 147, 147, 0.59);
+            padding-right: 15px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+        
+        .login h1 {
+            font-size: 25px;
+            font-weight: normal;
+            margin: 0px;
+            padding-top: 10px;
+        }
+        
+        #login .form-control,
+        #forgot-pass .form-control {
+            border-radius: 0;
+            border: 0px solid #808285;
+            margin: 30px auto;
+            max-width: 483px;
+            height: 35px;
+            background-color: #ffffff87;
+        }
+        
+        .modal-body h1 {
+            color: #303334;
+            font-size: 36px;
+            text-shadow: none;
+        }
+        
+        .navigation {
+            background: none;
+            border-bottom: 0px;
+        }
+    </style>
+    <script type="text/javascript">
+    </script>
+
+</head>
+
+<body class="heroBack" style="padding-bottom: 40px">
+    <!-- Find Company Code -->
+    <div id="company-code-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div style="color:#303334 " class="modal-body">
+
+                    <h1 class="modal-title text-center">Search For Company Code</h1>
+                    <form id="searchcocode">
+                        <div class="form-group text-left">
+                            <p style="font-size: 15px">Use the text box below to search for the company code by name. You can enter the entire company name or the first few letters. For example, type in Al for Allied Media Products, Inc.</p>
+                            <input type="coname" required class="form-control" id="company-name" placeholder="Company Name">
+                        </div>
+                        <div class="form-group text-center">
+
+                            <button type="submit" form="searchcocode" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                    <div class="divider"></div>
+                    <h1 class="modal-title text-center">Find Company Code</h1>
+                    <div class="form-group text-left">
+                        <p style="font-size: 15px">You can click the first letter or number of the company name from the list of characters below. All company names that start with the number or letter selected will appear.</p>
+                    </div>
+                    <div class="form-group text-center">
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=1">1 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=2">2 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=3">3 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=4">4 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=5">5 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=6">6 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=7">7 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=8">8 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=9">9 </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=A">A </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=B">B </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=C">C </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=D">D </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=E">E </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=F">F </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=G">G </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=H">H </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=I">I </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=J">J </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=K">K </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=L">L </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=M">M </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=N">N </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=O">O </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=P">P </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=Q">Q </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=R">R </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=S">S </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=T">T </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=U">U </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=V">V </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=W">W </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=X">X </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=Y">Y </a>
+
+                        <a href="Find_employer_code.cfm?ALFA_SEARCH=1&amp;CODE=Z">Z </a>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer text-center"> </div>
+            </div>
+        </div>
+
+    </div>
+    <!--HEADER NAV-->
+    <header id="header">
+        <div class="navigation">
+            <div class="">
+                <div class="row">
+
+                    <div class="col-xs-4 col-sm-2 col-md-2 col-lg-3 pull-left">
+
+                        <div class="logo pull-left">
+
+                            <a href="home.html"> <img src="images/qc_logo_white1.png" alt="Quick Confirm" title="Quick Confirm" width="400" style="height:auto;" class="logo-img" /> </a>
+                        </div>
+
+                        <!--LOGGED IN STATE ONLY-->
+                    </div>
+
+                    <!-- MOBILE NAV -->
+
+                    <!-- MOBILE NAV -->
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--END HEADER NAV-->
+
+    <!--HERO-->
+
+    <!--MAIN BODY CONTENT-->
+    <div class="space"></div>
+    <div class="contdivider" style="">
+        <div class="container">
+            
+
+            <div class="row">
+
+                <div style="" class="col-lg-4 col-md-4 col-sm-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 form-left text-center login ">
+
+                    <h1>Verifier Log In</h1>
+              
+
+
+                    <div class="login-div text-center" tabindex="-1" role="dialog">
+                        <div class="modal-70p Mborder">
+                            <div class=" text-center">
+                                <div class="modal-body">
+
+                                    <form id="login"> <p><a style="text-decoration: underline;" href="">Create an Account</a> </p>
+                                        <div class="form-group text-center">
+                                                                                      
+                                            <div id="hide-empy" class="custom-control custom-radio hide-empy">
+                                                
+                                                <input type="empid" required class="form-control" id="employer-id" placeholder="Employer ID">
+                                            </div>
+
+                                            <input type="password" required class="form-control" id="pass" placeholder="Password">
+                                            <p class="text-left modal-form-link"><a href="forgotpass.html" data-toggle="" data-target="" id="f">Forgot my password?</a></p>
+                                            <button type="submit" form="login" class="btn btn-primary">Enter</button>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                          
+                        </div>
+                    </div>
+                              </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  <!--FOOTER-->
+
+    <div class="full-overlay hidden-xs hidden-sm hidden-md hidden-lg" style="display: block;"></div>
+    <div class="mobile-nav-overlay"></div>
+
+    <!--PAGE JS-->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/boot.min.js"></script>
+    <script src="js/ie10-viewport-bug-fix.js"></script>
+    <script src="js/jquery.selectBoxIt.min.js"></script>
+
+    <!--GLOBAL JS-->
+    <script>
+    </script>
+</body>
+
+</html>

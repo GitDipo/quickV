@@ -342,6 +342,72 @@
         @media (min-width: 992px) {}
         </style>
     </head>
+    <body style="padding-bottom: 40px; background-color: #f7f7f7;">
+    <!--HEADER NAV FOR INSERT-->
+    <header id="header">
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-4 col-sm-2 col-md-2 col-lg-3 pull-left">
+                 
+                    
+                        <div class="logo pull-left">
+                 
+         
+                            <a href="home.cfm"> <img src="images/logo.png" alt="Quick Confirm" title="Quick Confirm" width="400" style="height:auto;" class="logo-img" /> </a>
+                        </div>
+
+                        <!--LOGGED IN STATE ONLY-->
+                    </div>
+
+                    <div class="hidden-xs col-sm-10 col-md-10 col-lg-9 text-right">
+                 
+            
+                        <a href="home.cfm" class="active" >Welcome</a>
+                        <a href="whatsnew.cfm">What's New!</a> 
+                        <a href="home.cfm#ourservices">Overview</a>
+                        <a href="about.cfm" >About Us</a>
+                        <a href="compservices.cfm" >Complimentary Services</a>
+            <!---target="blank"--->         <a class="section" href="contact.cfm" >Contact Us</a>
+                        
+
+                        <a href="login.cfm" data-toggle="" >Log In</a>
+                    </div>
+
+                    <!-- MOBILE NAV -->
+                    <div id="mobile-nav" class="visible-xs menu dropdown pull-right text-right col-xs-8">
+                        <a class="burger" id="menu-label" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> <span class=" pull-left"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </span> <span class="menu-title text-uppercase pull-left" data-lang="en">MENU</span> </a>
+                        <!-- HIDDEN MOBILE MENU -->
+                        <div class="dropdown-menu mobile-nav-bar" role="menu" aria-labelledby="menu-label">
+                            <ul class="sections main-menu">
+                                <li> <a class="section" href="home.cfm">Welcome</a> </li>
+                                <li> <a class="section" href="whatsnew.cfm">What's New!</a> </li>
+                                <li> <a class="section" href="home.cfm#ourservices">Overview</a> </li>
+                                <li> <a class="section" href="about.cfm">About Us</a> </li>
+                                <li> <a class="section" href="compservices.cfm">Complimentary Services</a> </li>
+                                <li> <a class="section" href="contact.cfm">Contact Us</a> </li>
+                                <!-- LOGGED IN STATE ONLY-->
+                            </ul>
+                            <ul class="sections main-menu lower">
+                                <li><a class="section" href="" ><span class="text-uppercase"></span></span></a> </li>
+                                <li class="mobile-menu-di">
+                                    <hr class="mobile-menu-di">
+                                </li>
+                                <li> <a id="sign-in-click-mbl" class="section" href="login.cfm">LOG IN</a> </li>
+                                <!---<li> <a data-toggle="modal" data-target="#sign-in-modal" id="sign-in-click-mbl" class="section" href="login.cfm">LOG IN</a> </li>--->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- MOBILE NAV -->
+
+                </div>
+            </div>
+        </div>
+    </header>
+<!--END HEADER NAV FOR INSERT-->
+
+</body>
     <body style="padding-bottom: 40px">
         <!--HEADER NAV-->
     <!--END HEADER NAV-->
