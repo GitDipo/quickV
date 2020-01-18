@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Page description" />
+    <meta name="keywords" content=", " />
+    <meta name="author" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <!--GLOBAL CSS-->
+    <link href="css/boot.min.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+
+    <link href="css/global.css" rel="stylesheet">
+
+    <title>Quick Confirm - Employment Verifications</title>
+    <link rel="icon" href="favicon.ico">
+    <!--TRACKING
+
+-->
+
+    <!--PAGE CSS-->
+    <style>
+        /* Write your page specific CSS here */
+                        html{
+              scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', 'Helvetica Neue', arial, sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        
+        label {
+            display: block;
+            max-width: 100%;
+            margin-bottom: 6px;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 19px;
+        }
+        
+        .form-control {
+            border-radius: 0;
+            border: none;
+            margin: 6px auto;
+            height: 34px;
+            font-size: 14px;
+        }
+        
+        .box-fill-dark {
+            background: #f7f7f7;
+        }
+        
+        .container {
+            width: 1150px;
+        }
+        
+        #header a {
+            height: 32px;
+            line-height: 32px;
+            font-weight: bold;
+            padding: 0px 20px 0px 13px;
+            color: white;
+        }
+        
+        #header a:hover {
+            height: 32px;
+            line-height: 32px;
+            font-weight: bold;
+            padding: 0px 20px 0px 13px;
+            background-color: white;
+            color: #0054a6;
+        }
+        
+        #header .current {
+            height: 32px;
+            line-height: 32px;
+            font-weight: bold;
+            padding: 0px 20px 0px 13px;
+            background-color: white;
+            color: #0054a6;
+        }
+        
+        @media (max-width: 480px) {
+            div .text-center > p {
+                text-align: center;
+            }
+            .home2sect-left {
+                padding: 29px 0 0 0;
+            }
+            .m-left {
+                text-align: left;
+            }
+            .m-right {
+                text-align: right;
+            }
+            .home2sect-right {
+                padding: 29px 0 0 0;
+            }
+            p {
+                text-align: left;
+            }
+            .btn-gray-share {
+                width: 100%;
+            }
+            .btn-primary-share {
+                width: 100%;
+            }
+            .show-mob {
+                display: inline-block;
+            }
+            .hide-mob {
+                display: none;
+            }
+            .mob-full {
+                width: 100%;
+            }
+            h1 {
+                font-size: 25px;
+            }
+            /* modal */
+            label {
+                font-weight: normal;
+                font-size: 14px;
+            }
+            .form-control,
+            #forgot-pass .form-control {
+                height: 40px;
+                margin: 5px auto 20px auto;
+            }
+            .modal-body h2,
+            .modal-body h1 {
+                font-size: 19px;
+            }
+            .container-fluid {
+                padding: 0;
+            }
+            .modal-body p {
+                font-size: 14px;
+            }
+            .mbl-smaller-txt {
+                font-size: 14px;
+                line-height: 22px;
+                vertical-align: 2px;
+            }
+            .modal-body .btn {
+                margin-bottom: 15px;
+                margin-left: 0px;
+            }
+        }
+        
+        .btn-primary,
+        .btn-primary:hover,
+        btn-primary:focus,
+        btn-primary:active {
+            background-color: #0054a6;
+            border: 0;
+            color: #fff;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            padding: 12px 30px;
+            min-width: 130px;
+            height: auto;
+            text-transform: uppercase;
+            -webkit-transition: background-color 0.3s ease;
+            -moz-transition: background-color 0.3s ease;
+            -o-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
+        }
+        
+        a.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+
+}
+
+        @media (max-width: 990px) {
+            .form-left,
+            .form-right {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container-fluid {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+        
+        @media (min-width: 992px) {}
+    </style>
+</head>
+
+<body style="padding-bottom: 40px;">
+    <!--HEADER NAV FOR INSERT-->
+    <header id="header">
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 pull-left">
+
+                        <div class="logo pull-left">
+
+                            <a href="home.html"> <img src="images/logo.png" alt="Quick Confirm" title="Quick Confirm" width="400" style="height:auto;" class="logo-img" /> </a>
+                        </div>
+
+                        <!--LOGGED IN STATE ONLY-->
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9 pull-left">
+
+                        <div class="pull-left">
+                            <div style="vertical-align: bottom;
+margin-top: 63px;
+font-size: 21px;
+font-weight: bold;">Employment &amp; Salary Verifications</div>
+                        </div>
+
+                        <!--LOGGED IN STATE ONLY-->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div style="background-color: #0054a6; ">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class=" col-sm-12 col-md-12 col-lg-12 text-center nav">
+
+                        <a href="VerifierWelcome.html">Home</a>
+
+                        <a href="VerifierWelcomeResearchRequest.html">Research Request</a>
+
+                        <a href="Verifier_authorization_status.html">Re-Verify</a>
+
+                        <a href="Verifier_setup_authorization.html">Reports</a>
+
+                        <a href="Verifier_FAQ.html">Frequently Asked Questions</a>
+
+                    </div>
+
+                    <!-- MOBILE NAV -
+                    <div id="mobile-nav" class="visible-xs menu dropdown pull-right text-right col-xs-8">
+                        <a class="burger" id="menu-label" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> <span class=" pull-left"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </span> <span class="menu-title text-uppercase pull-left" data-lang="en">MENU</span> </a>
+                       HIDDEN MOBILE MENU 
+                        <div class="dropdown-menu mobile-nav-bar" role="menu" aria-labelledby="menu-label">
+                            <ul class="sections main-menu">
+                                <li> <a class="section" href="home.html">Welcome</a> </li>
+                                <li> <a class="section" href="#.html">What's New!</a> </li>
+                                <li> <a class="section" href="home.html#ourservices">Overview</a> </li>
+                                <li> <a class="section" href="about.html">About Us</a> </li>
+                                <li> <a class="section" href="compservices.html">Complimentary Services</a> </li>
+                                <li> <a class="section" href="contact.html">Contact Us</a> </li>
+                             LOGGED IN STATE ONLY                            </ul>
+                            <ul class="sections main-menu lower">
+                                <li><a class="section" href="" target="blank"><span class="text-uppercase"></span></span></a> </li>
+                                <li class="mobile-menu-di">
+                                    <hr class="mobile-menu-di">
+                                </li>
+                                <li> <a data-toggle="modal" data-target="#sign-in-modal" id="sign-in-click-mbl" class="section" href="#sign-in">LOG IN</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                   MOBILE NAV -->
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!--END HEADER NAV FOR INSERT-->
+
+    <!--MAIN BODY CONTENT-->
+
+    <div class="contdivider" style="background-color:#ffffff; padding: 50px 0 55px 0px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12 form-left text-left">
+                    <h1>Frequently Asked Questions</h1>
+                    <br> 1. <a href="#1">How secure is my information in Quick Confirm?</a>
+                    <br> 2. <a href="#2">How do I change my password?</a>
+                    <br> 3. <a href="#3">What are my payment choices?</a>
+                    <br> 4. <a href="#4">How do I get a salary authorization number when I need to verify salary or salary history for my client?</a>
+                    <br> 5. <a href="#5">Does the system keep my credit card number?</a>
+                    <br> 6. <a href="#6">How much do verifications cost?</a>
+                    <br> 7. <a href="#7">When will I receive my verification?</a>
+                    <br> 8. <a href="#8">I completed a verification several days ago and need to re-verify employment. How do I accomplish this?</a>
+                    <br>
+                    <br>
+                    <br>
+
+                    <ol>
+                        <li>
+                            <a class="anchor" id="1"></a><b>How secure is my information in Quick Confirm?</b>
+
+                            <br>We take security very seriously. Quick Confirm's first line of defense is its firewall. Only the application server that drives the web application can access the database server, using specific IP address and port access permissions.
+                            <br>
+                            <br> Data is encrypted at each point where it is read or transferred; information is encrypted using the very secure DES3, 128-bit encryption technology. Digital Certificates, called SSL, are used for traffic between our server and the requester's workstation. Web server software is kept up to date with the latest stable releases, service packs, and security patches. Security is reviewed on a regular basis and is updated as the industry evolves.</li>
+                        <br>
+                        <li>
+                            <a class="anchor" id="2"></a> <b> How do I change my password?</b>
+                            <br>
+                            <br> You can change or reset your password by clicking the "Forgot your password" link on the Verifier Login page. This link will bring you to a page where you are prompted to enter your User ID. You are then asked to answer the three challenge questions you set up when you first logged into the system. Upon successfully answering these questions, you are allowed to enter a new password.</li>
+                        <br>
+                        <li> <a class="anchor" id="3"></a><b> What are my payment choices?</b>
+                            <br>
+                            <br> Quick Confirm offers 3 payments choices:
+                            <ul>
+                                <li>
+                                    A pay as you go credit card option, where you pay a fee for each transaction. Quick Confirm does not save the credit card number; you are only billed when you complete verifications.</li>
+                                <li>
+                                    A Prepay option where you can purchase verifications in advance and have funds available for use whenever you need it. This means your staff does not need to use a credit card unless the balance is not sufficient for the verification you are requesting. When you choose this option, we will add additional value to your account depending on how much you purchase.</li>
+                                <li>A monthly invoice option where the cost of verifications decreases as your activity increases. This option does have an annual fee to cover the cost of invoicing.
+                                </li>
+                            </ul>
+                            <br>
+                            <li><a class="anchor" id="4"></a> <b> How do I get a salary authorization number when I need to verify salary or salary history for my client?</b>
+                                <br>
+                                <br> A salary authorization is obtained from your client, they need to login to www.quickconfirm.com using their employee credentials and ‘Authorize A Salary Verification’. If they need assistance, they can call us at 1 888 505 6745 Monday – Friday between the hours of 8 A.M. to 5 P.M. ET.</li>
+
+                            <br>
+                            <li><a class="anchor" id="5"></a> <b> Does the system keep my credit card number?</b>
+
+                                <br>
+                                <br> Quick Confirm does not save credit card numbers in the system. Each time you perform verifications and you do not have a prepaid balance, you will need to enter a credit card number.</li>
+
+                            <br>
+                            <li> <a class="anchor" id="6"></a><b> How much do verifications cost?</b>
+
+                                <br>
+                                <br> Pay as you go credit card transactions cost $22.50 for employment, $22.50 for employment plus salary and $22.50 for the prior two categories plus up to 24 months of salary history by pay period.
+                                <br>
+                                <br> When using a prepay account, the cost are the same as for pay as you go, though we add a percent to purchases greater than $50.00. The larger the purchase amount, the larger the value added. Given the value that is added, your actual cost for verifications decreases as you prepay larger amounts and the account balance does not expire. Our policy does not allow for refunds of unused balances.
+                                <br>
+                                <br> Invoice accounts start at $16.00, $16.00 and $16.00 depending on type of verification and the price decreases as monthly volumes increase. Invoice accounts do carry an annual fee to cover the cost of invoicing.</li>
+
+                            <br>
+                            <li><a class="anchor" id="7"></a> <b> When will I receive my verification?</b>
+
+                                <br>
+                                <br> Verifications are displayed on your workstation immediately. Press the ‘View Verification Results’ button to see your verification. You can either print the result or save it as a PDF file if you have this capability on your workstation.</li>
+
+                            <br>
+                            <li><a class="anchor" id="8"></a> <b> I completed a verification several days ago and need to re-verify employment. How do I accomplish this?</b>
+
+                                <br>
+                                <br> At the present time Quick Confirm does not have a re-verification capability, if your verification was completed within 5 business days call us at 1 888 505 6745 and a customer service representative will assist you.
+                                <br>
+                                <br> If your request was completed more than 5 business days ago, you will need to verify employment again at www.quickconfirm.com.</li>
+
+                           
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div style="padding: 10px 0 10px 0" class="col-lg-12 copy text-center">
+
+                    Copyright © 2007 - 2020 QuickConfirm.com All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="full-overlay hidden-xs hidden-sm hidden-md hidden-lg" style="display: block;"></div>
+    <div class="mobile-nav-overlay"></div>
+    <!--GLOBAL JS-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/boot.min.js"></script>
+    <script src="js/ie10-viewport-bug-fix.js"></script>
+    <script src="js/jquery.selectBoxIt.min.js"></script>
+    <!--PAGE JS-->
+    <script>
+        var path = window.location.pathname;
+        path = path.split('/');
+        path = path[path.length - 1];
+        var navlink = document.getElementsByClassName('nav')[0].getElementsByTagName("a");
+
+        var i = 0;
+
+        for (i; i < navlink.length; i++) {
+            var lb = navlink[i].href;
+            lb = lb.split('/');
+            lb = lb[lb.length - 1];
+            if (lb == path) {
+                navlink[i].classList.add("current");
+            }
+        }
+    </script>
+</body>
+
+</html>
